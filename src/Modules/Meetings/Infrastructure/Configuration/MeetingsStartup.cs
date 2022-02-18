@@ -1,5 +1,5 @@
-﻿using System;
-using Autofac;
+﻿using Autofac;
+
 using CompanyName.MyMeetings.BuildingBlocks.Application;
 using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
 using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Emails;
@@ -20,7 +20,11 @@ using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Media
 using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Processing;
 using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Processing.Outbox;
 using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Quartz;
+
 using Serilog.Extensions.Logging;
+
+using System;
+
 using ILogger = Serilog.ILogger;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration

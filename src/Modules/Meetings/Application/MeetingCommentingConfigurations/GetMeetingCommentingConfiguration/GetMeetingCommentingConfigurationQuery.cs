@@ -1,6 +1,6 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.GetMeetingCommentingConfiguration
 {

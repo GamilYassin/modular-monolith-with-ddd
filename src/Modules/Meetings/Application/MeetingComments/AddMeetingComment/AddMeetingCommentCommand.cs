@@ -1,5 +1,6 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddMeetingComment
 {

@@ -6,6 +6,7 @@ using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Domain.Meetin
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Domain.Members;
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.InternalCommands;
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Outbox;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
