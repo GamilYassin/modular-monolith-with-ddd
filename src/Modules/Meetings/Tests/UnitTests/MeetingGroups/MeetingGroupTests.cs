@@ -119,7 +119,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.MeetingGroups
                     null,
                     0,
                     Term.NoTerm,
-                    MoneyValue.Undefined,
+                    Money.Undefined,
                     new List<MemberId>(),
                     creatorId);
             });
@@ -142,7 +142,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.MeetingGroups
                 null,
                 0,
                 Term.NoTerm,
-                MoneyValue.Undefined,
+                Money.Undefined,
                 new List<MemberId>(),
                 definedProposalMemberId);
 
@@ -173,7 +173,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.MeetingGroups
                 null,
                 0,
                 Term.NoTerm,
-                MoneyValue.Undefined,
+                Money.Undefined,
                 hosts,
                 definedProposalMemberId);
 
@@ -209,7 +209,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.MeetingGroups
                     null,
                     0,
                     Term.NoTerm,
-                    MoneyValue.Undefined,
+                    Money.Undefined,
                     hosts,
                     definedProposalMemberId);
             });
@@ -235,7 +235,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.MeetingGroups
                     null,
                     0,
                     Term.NoTerm,
-                    MoneyValue.Undefined,
+                    Money.Undefined,
                     new List<MemberId>(),
                     creatorId);
             });

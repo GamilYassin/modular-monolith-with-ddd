@@ -32,7 +32,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         private bool _isRemoved;
 
-        private MoneyValue _fee;
+        private Money _fee;
 
         private bool _isFeePaid;
 
@@ -46,7 +46,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             DateTime decisionDate,
             MeetingAttendeeRole role,
             int guestsNumber,
-            MoneyValue eventFee)
+            Money eventFee)
         {
             return new MeetingAttendee(meetingId, attendeeId, decisionDate, role, guestsNumber, eventFee);
         }
@@ -57,7 +57,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             DateTime decisionDate,
             MeetingAttendeeRole role,
             int guestsNumber,
-            MoneyValue eventFee)
+            Money eventFee)
         {
             this.AttendeeId = attendeeId;
             this.MeetingId = meetingId;
@@ -67,13 +67,13 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             _decisionChanged = false;
             _isFeePaid = false;
 
-            if (eventFee != MoneyValue.Undefined)
+            if (eventFee != Money.Undefined)
             {
                 _fee = (1 + guestsNumber) * eventFee;
             }
             else
             {
-                _fee = MoneyValue.Undefined;
+                _fee = Money.Undefined;
             }
 
             this.AddDomainEvent(new MeetingAttendeeAddedDomainEvent(

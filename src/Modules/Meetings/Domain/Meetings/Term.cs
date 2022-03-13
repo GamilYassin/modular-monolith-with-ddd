@@ -24,9 +24,9 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         internal bool IsInTerm(DateTime date)
         {
-            var left = !this.StartDate.HasValue || this.StartDate.Value <= date;
+            bool left = !this.StartDate.HasValue || this.StartDate.Value <= date;
 
-            var right = !this.EndDate.HasValue || this.EndDate.Value >= date;
+            bool right = !this.EndDate.HasValue || this.EndDate.Value >= date;
 
             return left && right;
         }

@@ -36,7 +36,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         private Term _rsvpTerm;
 
-        private MoneyValue _eventFee;
+        private Money _eventFee;
 
         private MemberId _creatorId;
 
@@ -67,7 +67,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             MeetingLocation location,
             MeetingLimits meetingLimits,
             Term rsvpTerm,
-            MoneyValue eventFee,
+            Money eventFee,
             List<MemberId> hostsMembersIds,
             MemberId creatorId)
         {
@@ -92,7 +92,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             MeetingLocation location,
             MeetingLimits meetingLimits,
             Term rsvpTerm,
-            MoneyValue eventFee,
+            Money eventFee,
             List<MemberId> hostsMembersIds,
             MemberId creatorId)
         {
@@ -119,12 +119,12 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             {
                 foreach (var hostMemberId in hostsMembersIds)
                 {
-                    _attendees.Add(MeetingAttendee.CreateNew(this.Id, hostMemberId, rsvpDate, MeetingAttendeeRole.Host, 0, MoneyValue.Undefined));
+                    _attendees.Add(MeetingAttendee.CreateNew(this.Id, hostMemberId, rsvpDate, MeetingAttendeeRole.Host, 0, Money.Undefined));
                 }
             }
             else
             {
-                _attendees.Add(MeetingAttendee.CreateNew(this.Id, creatorId, rsvpDate, MeetingAttendeeRole.Host, 0, MoneyValue.Undefined));
+                _attendees.Add(MeetingAttendee.CreateNew(this.Id, creatorId, rsvpDate, MeetingAttendeeRole.Host, 0, Money.Undefined));
             }
         }
 
@@ -135,7 +135,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             MeetingLocation location,
             MeetingLimits meetingLimits,
             Term rsvpTerm,
-            MoneyValue eventFee,
+            Money eventFee,
             MemberId modifyUserId)
         {
             this.CheckRule(new AttendeesLimitCannotBeChangedToSmallerThanActiveAttendeesRule(

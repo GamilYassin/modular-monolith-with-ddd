@@ -29,7 +29,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.ChangeMee
                 MeetingLocation.CreateNew(request.MeetingLocationName, request.MeetingLocationAddress, request.MeetingLocationPostalCode, request.MeetingLocationCity),
                 MeetingLimits.Create(request.AttendeesLimit, request.GuestsLimit),
                 Term.CreateNewBetweenDates(request.RSVPTermStartDate, request.RSVPTermEndDate),
-                request.EventFeeValue.HasValue ? MoneyValue.Of(request.EventFeeValue.Value, request.EventFeeCurrency) : MoneyValue.Undefined,
+                request.EventFeeValue.HasValue ? Money.Of(request.EventFeeValue.Value, request.EventFeeCurrency) : Money.Undefined,
                 _memberContext.MemberId);
 
             return Unit.Value;

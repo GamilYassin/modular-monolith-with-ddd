@@ -38,7 +38,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Domain.Meetings
                 b.Property(p => p.EndDate).HasColumnName("RSVPTermEndDate");
             });
 
-            builder.OwnsOne<MoneyValue>("_eventFee", b =>
+            builder.OwnsOne<Money>("_eventFee", b =>
             {
                 b.Property(p => p.Value).HasColumnName("EventFeeValue");
                 b.Property(p => p.Currency).HasColumnName("EventFeeCurrency");
@@ -74,7 +74,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Domain.Meetings
                     b.Property(x => x.Value).HasColumnName("RoleCode");
                 });
 
-                y.OwnsOne<MoneyValue>("_fee", b =>
+                y.OwnsOne<Money>("_fee", b =>
                 {
                     b.Property(p => p.Value).HasColumnName("FeeValue");
                     b.Property(p => p.Currency).HasColumnName("FeeCurrency");

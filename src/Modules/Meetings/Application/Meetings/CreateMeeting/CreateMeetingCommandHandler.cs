@@ -39,7 +39,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.CreateMee
                 request.AttendeesLimit,
                 request.GuestsLimit,
                 Term.CreateNewBetweenDates(request.RSVPTermStartDate, request.RSVPTermEndDate),
-                request.EventFeeValue.HasValue ? MoneyValue.Of(request.EventFeeValue.Value, request.EventFeeCurrency) : MoneyValue.Undefined,
+                request.EventFeeValue.HasValue ? Money.Of(request.EventFeeValue.Value, request.EventFeeCurrency) : Money.Undefined,
                 hostsMembersIds,
                 _memberContext.MemberId);
 

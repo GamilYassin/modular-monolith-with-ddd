@@ -72,7 +72,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.Meetings
                 options.AttendeesLimit,
                 options.GuestsLimit,
                 rsvpTerm,
-                MoneyValue.Undefined,
+                Money.Undefined,
                 new List<MemberId>(),
                 proposalMemberId);
 

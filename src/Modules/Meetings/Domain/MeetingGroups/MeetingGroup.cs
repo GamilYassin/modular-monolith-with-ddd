@@ -101,7 +101,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
             int? attendeesLimit,
             int guestsLimit,
             Term rsvpTerm,
-            MoneyValue eventFee,
+            Money eventFee,
             List<MemberId> hostsMembersIds,
             MemberId creatorId)
         {
