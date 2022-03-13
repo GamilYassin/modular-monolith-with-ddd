@@ -77,7 +77,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configura
                 Service service,
                 Func<Service, IEnumerable<IComponentRegistration>> registrationAccessor)
             {
-                var components = _source.RegistrationsFor(service, registrationAccessor);
+                var components = _source.RegistrationsFor(service, (Func<Service, IEnumerable<ServiceRegistration>>)registrationAccessor);
                 foreach (var c in components)
                 {
                     var defs = c.Target.Services
@@ -89,6 +89,11 @@ namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configura
                         yield return c;
                     }
                 }
+            }
+
+            public IEnumerable<IComponentRegistration> RegistrationsFor(Service service, Func<Service, IEnumerable<ServiceRegistration>> registrationAccessor)
+            {
+                throw new NotImplementedException();
             }
 
             public bool IsAdapterForIndividualComponents => _source.IsAdapterForIndividualComponents;
