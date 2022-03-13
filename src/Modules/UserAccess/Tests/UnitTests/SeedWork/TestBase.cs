@@ -7,7 +7,7 @@ namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UnitTests.SeedWork
 {
     public abstract class TestBase
     {
-        public static T AssertPublishedDomainEvent<T>(Entity aggregate)
+        public static T AssertPublishedDomainEvent<T>(EntityObjectBase aggregate)
             where T : IDomainEvent
         {
             var domainEvent = DomainEventsTestHelper.GetAllDomainEvents(aggregate).OfType<T>().SingleOrDefault();

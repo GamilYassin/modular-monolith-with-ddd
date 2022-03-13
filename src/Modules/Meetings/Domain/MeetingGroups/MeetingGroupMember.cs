@@ -6,7 +6,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
 {
-    public class MeetingGroupMember : Entity
+    public class MeetingGroupMember : EntityObjectBase
     {
         internal MeetingGroupId MeetingGroupId { get; private set; }
 

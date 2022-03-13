@@ -1,12 +1,15 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
 using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Events;
 using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Rules;
 using CompanyName.MyMeetings.Modules.Administration.Domain.Users;
 
+using DomainPack.Contracts.EntitiesContracts;
+using DomainPack.Entities;
+
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals
 {
-    public class MeetingGroupProposal : Entity, IAggregateRoot
+    public class MeetingGroupProposal : EntityObjectBase<Guid>, IAggregateRoot
     {
         private string _name;
 
@@ -16,19 +19,21 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
 
         private DateTime _proposalDate;
 
-        private UserId _proposalUserId;
+        private Guid _proposalUserId;
 
         private MeetingGroupProposalStatus _status;
 
         private MeetingGroupProposalDecision _decision;
 
+
         private MeetingGroupProposal(
-            MeetingGroupProposalId id,
+            Guid id,
             string name,
             string description,
             MeetingGroupLocation location,
-            UserId proposalUserId,
+            Guid proposalUserId,
             DateTime proposalDate)
+            : base(id)
         {
             Id = id;
             _name = name;
@@ -44,11 +49,9 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
         }
 
         private MeetingGroupProposal()
+            : base(default)
         {
-            _decision = MeetingGroupProposalDecision.NoDecision;
         }
-
-        public MeetingGroupProposalId Id { get; private set; }
 
         public void Accept(UserId userId)
         {
@@ -78,11 +81,11 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
             string name,
             string description,
             MeetingGroupLocation location,
-            UserId proposalUserId,
+            Guid proposalUserId,
             DateTime proposalDate)
         {
-            var meetingGroupProposal = new MeetingGroupProposal(
-                new MeetingGroupProposalId(meetingGroupProposalId),
+            MeetingGroupProposal meetingGroupProposal = new MeetingGroupProposal(
+                Guid.NewGuid(),
                 name,
                 description,
                 location,
@@ -90,6 +93,11 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
                 proposalDate);
 
             return meetingGroupProposal;
+        }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
         }
     }
 }

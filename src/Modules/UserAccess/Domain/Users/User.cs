@@ -6,7 +6,7 @@ using CompanyName.MyMeetings.Modules.UserAccess.Domain.Users.Events;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.Users
 {
-    public class User : Entity, IAggregateRoot
+    public class User : EntityObjectBase, IAggregateRoot
     {
         public UserId Id { get; private set; }
 

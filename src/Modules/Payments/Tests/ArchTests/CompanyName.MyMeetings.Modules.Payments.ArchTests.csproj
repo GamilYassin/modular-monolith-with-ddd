@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BuildingBlocks\Domain\CompanyName.MyMeetings.BuildingBlocks.Domain.csproj" />
     <ProjectReference Include="..\..\Application\CompanyName.MyMeetings.Modules.Payments.Application.csproj" />
     <ProjectReference Include="..\..\Domain\CompanyName.MyMeetings.Modules.Payments.Domain.csproj" />
     <ProjectReference Include="..\..\Infrastructure\CompanyName.MyMeetings.Modules.Payments.Infrastructure.csproj" />

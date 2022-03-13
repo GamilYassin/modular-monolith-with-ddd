@@ -6,7 +6,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes
 {
-    public class MeetingMemberCommentLike : Entity, IAggregateRoot
+    public class MeetingMemberCommentLike : EntityObjectBase, IAggregateRoot
     {
         public MeetingMemberCommentLikeId Id { get; }
 

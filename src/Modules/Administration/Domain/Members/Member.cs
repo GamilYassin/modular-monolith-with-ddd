@@ -4,7 +4,7 @@ using CompanyName.MyMeetings.Modules.Administration.Domain.Members.Events;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.Members
 {
-    public class Member : Entity, IAggregateRoot
+    public class Member : EntityObjectBase, IAggregateRoot
     {
         public MemberId Id { get; private set; }
 

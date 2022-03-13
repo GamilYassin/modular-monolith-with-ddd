@@ -1,5 +1,7 @@
 ﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
 
+using DomainPack.Contracts.ValidationContracts;
+
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Rules
 {
     public class MeetingGroupProposalRejectionMustHaveAReasonRule : IBusinessRule

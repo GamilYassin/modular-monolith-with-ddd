@@ -7,7 +7,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
-    public class MeetingNotAttendee : Entity
+    public class MeetingNotAttendee : EntityObjectBase
     {
         internal MemberId MemberId { get; private set; }
 

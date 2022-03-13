@@ -8,7 +8,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals
 {
-    public class MeetingGroupProposal : Entity, IAggregateRoot
+    public class MeetingGroupProposal : EntityObjectBase, IAggregateRoot
     {
         public MeetingGroupProposalId Id { get; private set; }
 

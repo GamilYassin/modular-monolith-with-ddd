@@ -5,7 +5,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members
 {
-    public class Member : Entity, IAggregateRoot
+    public class Member : EntityObjectBase, IAggregateRoot
     {
         public MemberId Id { get; private set; }
 

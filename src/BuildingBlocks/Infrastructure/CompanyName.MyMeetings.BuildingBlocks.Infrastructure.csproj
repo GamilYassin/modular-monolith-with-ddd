@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application\CompanyName.MyMeetings.BuildingBlocks.Application.csproj" />
-    <ProjectReference Include="..\Domain\CompanyName.MyMeetings.BuildingBlocks.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\DomainPack\DomainPack.Contracts\DomainPack.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\DomainPack\DomainPack.Entities\DomainPack.Entities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,14 +1,17 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
+using DomainPack.DomainEvents;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Events
 {
     internal class MeetingGroupProposalRejectedDomainEvent : DomainEventBase
     {
-        internal MeetingGroupProposalRejectedDomainEvent(MeetingGroupProposalId meetingGroupProposalId)
+        internal MeetingGroupProposalRejectedDomainEvent(Guid meetingGroupProposalId)
         {
             MeetingGroupProposalId = meetingGroupProposalId;
         }
 
-        internal MeetingGroupProposalId MeetingGroupProposalId { get; }
+        internal Guid MeetingGroupProposalId { get; }
     }
 }

@@ -13,7 +13,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
 {
-    public class MeetingComment : Entity, IAggregateRoot
+    public class MeetingComment : EntityObjectBase, IAggregateRoot
     {
         public MeetingCommentId Id { get; }
 

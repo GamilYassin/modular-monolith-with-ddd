@@ -8,7 +8,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations
 {
-    public class MeetingCommentingConfiguration : Entity, IAggregateRoot
+    public class MeetingCommentingConfiguration : EntityObjectBase, IAggregateRoot
     {
         public MeetingCommentingConfigurationId Id { get; }
 

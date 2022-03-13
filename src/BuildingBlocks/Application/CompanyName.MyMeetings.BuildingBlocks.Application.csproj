@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\CompanyName.MyMeetings.BuildingBlocks.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\DomainPack\DomainPack.Contracts\DomainPack.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

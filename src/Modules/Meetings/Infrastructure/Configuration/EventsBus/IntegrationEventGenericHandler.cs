@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using Autofac;
 using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
 using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.EventBus;
 using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Serialization;
 using Dapper;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using DomainPack.DomainEvents.EventBus;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.EventsBus
 {

@@ -1,14 +1,16 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿using System;
+
+using DomainPack.DomainEvents;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Events
 {
     public class MeetingGroupProposalVerificationRequestedDomainEvent : DomainEventBase
     {
-        internal MeetingGroupProposalVerificationRequestedDomainEvent(MeetingGroupProposalId meetingGroupProposalId)
+        internal MeetingGroupProposalVerificationRequestedDomainEvent(Guid meetingGroupProposalId)
         {
             MeetingGroupProposalId = meetingGroupProposalId;
         }
 
-        public MeetingGroupProposalId MeetingGroupProposalId { get; }
+        public Guid MeetingGroupProposalId { get; }
     }
 }

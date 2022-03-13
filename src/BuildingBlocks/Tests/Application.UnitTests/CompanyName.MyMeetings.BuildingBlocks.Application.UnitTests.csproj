@@ -18,8 +18,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Application\CompanyName.MyMeetings.BuildingBlocks.Application.csproj" />
-  </ItemGroup>
-
 </Project>

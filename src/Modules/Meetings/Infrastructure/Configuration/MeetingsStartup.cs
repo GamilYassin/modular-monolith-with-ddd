@@ -3,7 +3,6 @@
 using CompanyName.MyMeetings.BuildingBlocks.Application;
 using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
 using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Emails;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.EventBus;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.AcceptMeetingGroupProposal;
@@ -26,6 +25,7 @@ using Serilog.Extensions.Logging;
 using System;
 
 using ILogger = Serilog.ILogger;
+using DomainPack.DomainEvents.EventBus;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration
 {

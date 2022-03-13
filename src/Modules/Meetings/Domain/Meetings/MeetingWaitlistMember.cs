@@ -6,7 +6,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
-    public class MeetingWaitlistMember : Entity
+    public class MeetingWaitlistMember : EntityObjectBase
     {
         internal MemberId MemberId { get; private set; }
 

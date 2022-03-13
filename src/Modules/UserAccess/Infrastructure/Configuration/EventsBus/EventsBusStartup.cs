@@ -1,7 +1,7 @@
 ﻿using Autofac;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.EventBus;
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationEvents;
 using Serilog;
+using DomainPack.DomainEvents.EventBus;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.EventsBus
 {

@@ -41,7 +41,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.ArchTests.Domain
         {
             var types = Types.InAssembly(DomainAssembly)
                 .That()
-                .Inherit(typeof(Entity))
+                .Inherit(typeof(EntityObjectBase))
                 .And().DoNotImplementInterface(typeof(IAggregateRoot)).GetTypes();
 
             const BindingFlags bindingFlags = BindingFlags.DeclaredOnly |
@@ -70,7 +70,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.ArchTests.Domain
         {
             var entityTypes = Types.InAssembly(DomainAssembly)
                 .That()
-                .Inherit(typeof(Entity)).GetTypes();
+                .Inherit(typeof(EntityObjectBase)).GetTypes();
 
             var aggregateRoots = Types.InAssembly(DomainAssembly)
                 .That().ImplementInterface(typeof(IAggregateRoot)).GetTypes().ToList();
@@ -114,7 +114,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.ArchTests.Domain
         {
             var entityTypes = Types.InAssembly(DomainAssembly)
                 .That()
-                .Inherit(typeof(Entity)).GetTypes();
+                .Inherit(typeof(EntityObjectBase)).GetTypes();
 
             var failingTypes = new List<Type>();
             foreach (var entityType in entityTypes)
@@ -143,7 +143,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.ArchTests.Domain
         {
             var domainObjectTypes = Types.InAssembly(DomainAssembly)
                 .That()
-                        .Inherit(typeof(Entity))
+                        .Inherit(typeof(EntityObjectBase))
                     .Or()
                         .Inherit(typeof(ValueObject))
                 .GetTypes();

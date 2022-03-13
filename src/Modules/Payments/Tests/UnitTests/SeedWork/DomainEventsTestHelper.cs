@@ -8,7 +8,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.UnitTests.SeedWork
 {
     public class DomainEventsTestHelper
     {
-        public static List<IDomainEvent> GetAllDomainEvents(Entity aggregate)
+        public static List<IDomainEvent> GetAllDomainEvents(EntityObjectBase aggregate)
         {
             List<IDomainEvent> domainEvents = new List<IDomainEvent>();
 
@@ -21,11 +21,11 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.UnitTests.SeedWork
 
             foreach (var field in fields)
             {
-                var isEntity = typeof(Entity).IsAssignableFrom(field.FieldType);
+                var isEntity = typeof(EntityObjectBase).IsAssignableFrom(field.FieldType);
 
                 if (isEntity)
                 {
-                    var entity = field.GetValue(aggregate) as Entity;
+                    var entity = field.GetValue(aggregate) as EntityObjectBase;
                     domainEvents.AddRange(GetAllDomainEvents(entity).ToList());
                 }
 
@@ -35,7 +35,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.UnitTests.SeedWork
                     {
                         foreach (var en in enumerable)
                         {
-                            if (en is Entity entityItem)
+                            if (en is EntityObjectBase entityItem)
                             {
                                 domainEvents.AddRange(GetAllDomainEvents(entityItem));
                             }

@@ -1,4 +1,3 @@
-using CompanyName.MyMeetings.BuildingBlocks.Application.Queries;
 using NUnit.Framework;
 
 namespace CompanyName.MyMeetings.BuildingBlocks.Application.UnitTests.Queries

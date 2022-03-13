@@ -7,7 +7,7 @@ using CompanyName.MyMeetings.Modules.UserAccess.Domain.Users;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations
 {
-    public class UserRegistration : Entity, IAggregateRoot
+    public class UserRegistration : EntityObjectBase, IAggregateRoot
     {
         public UserRegistrationId Id { get; private set; }
 

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\BuildingBlocks\Domain\CompanyName.MyMeetings.BuildingBlocks.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Entities\DomainPack.Entities.csproj" />
   </ItemGroup>
 
 </Project>

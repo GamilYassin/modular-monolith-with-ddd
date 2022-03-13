@@ -4,7 +4,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions
 {
-    public class MemberSubscription : Entity, IAggregateRoot
+    public class MemberSubscription : EntityObjectBase, IAggregateRoot
     {
         public MemberSubscriptionId Id { get; private set; }
 
