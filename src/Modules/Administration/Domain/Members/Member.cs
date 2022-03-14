@@ -1,14 +1,11 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Administration.Domain.Members.Events;
+﻿using CompanyName.MyMeetings.Modules.Administration.Domain.Members.Events;
 
 using DomainPack.Contracts.EntitiesContracts;
-using DomainPack.Entities;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.Members
 {
     public class Member : EntityObjectBase<Guid>, IAggregateRoot
     {
-
         private string _login;
 
         private string _email;
@@ -21,8 +18,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.Members
 
         private DateTime _createDate;
 
-
-        private Member(Guid id, string login, string email, string firstName, string lastName, string name): base(id)
+        private Member(Guid id, string login, string email, string firstName, string lastName, string name) : base(id)
         {
             _login = login;
             _email = email;

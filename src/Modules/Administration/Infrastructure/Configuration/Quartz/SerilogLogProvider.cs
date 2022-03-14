@@ -1,8 +1,4 @@
-﻿using System;
-using Quartz.Logging;
-
-using Serilog.Context;
-using Serilog.Sinks.File;
+﻿using Quartz.Logging;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Quartz
 {

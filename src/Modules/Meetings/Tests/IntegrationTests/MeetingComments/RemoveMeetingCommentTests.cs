@@ -1,12 +1,13 @@
-﻿using System;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddMeetingComment;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddMeetingComment;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.GetMeetingComments;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.RemoveMeetingComment;
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.SeedWork;
+
 using NUnit.Framework;
+
+using System;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.MeetingComments
 {

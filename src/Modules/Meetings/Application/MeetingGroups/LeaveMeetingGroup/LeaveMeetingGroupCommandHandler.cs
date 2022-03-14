@@ -2,8 +2,6 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.LeaveMeetingGroup
 {
     internal class LeaveMeetingGroupCommandHandler : ICommandHandler<LeaveMeetingGroupCommand>

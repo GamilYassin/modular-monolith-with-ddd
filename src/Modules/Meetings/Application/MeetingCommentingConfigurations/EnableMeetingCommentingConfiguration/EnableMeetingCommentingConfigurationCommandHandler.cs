@@ -4,8 +4,6 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.EnableMeetingCommentingConfiguration
 {
     internal class EnableMeetingCommentingConfigurationCommandHandler : ICommandHandler<EnableMeetingCommentingConfigurationCommand>

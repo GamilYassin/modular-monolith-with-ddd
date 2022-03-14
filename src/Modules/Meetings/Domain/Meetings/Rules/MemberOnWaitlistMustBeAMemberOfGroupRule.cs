@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 
 using DomainPack.Contracts.ValidationContracts;
 

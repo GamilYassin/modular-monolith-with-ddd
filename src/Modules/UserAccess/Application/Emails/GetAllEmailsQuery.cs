@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
+
+using System.Collections.Generic;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Application.Emails
 {

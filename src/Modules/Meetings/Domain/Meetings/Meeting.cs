@@ -6,17 +6,11 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 using DomainPack.Contracts.EntitiesContracts;
-using DomainPack.Entities;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
     public class Meeting : EntityObjectBase<Guid>, IAggregateRoot
     {
-
         private Guid _meetingGroupId;
 
         private string _title;
@@ -52,7 +46,6 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
         private Guid _cancelMemberId;
 
         private bool _isCanceled;
-
 
         internal static Meeting CreateNew(
             Guid meetingGroupId,

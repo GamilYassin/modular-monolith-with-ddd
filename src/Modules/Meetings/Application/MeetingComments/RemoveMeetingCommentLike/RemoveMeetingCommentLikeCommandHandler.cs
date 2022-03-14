@@ -2,8 +2,6 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.RemoveMeetingCommentLike
 {
     internal class RemoveMeetingCommentLikeCommandHandler : ICommandHandler<RemoveMeetingCommentLikeCommand>

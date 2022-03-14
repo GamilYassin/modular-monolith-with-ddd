@@ -2,8 +2,6 @@
 using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.AcceptMeetingGroupProposal;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals
 {
     public class MeetingGroupProposalAcceptedIntegrationEventHandler :

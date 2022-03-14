@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.Users.Events
+﻿namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.Users.Events
 {
     public class UserCreatedDomainEvent : DomainEventBase
     {

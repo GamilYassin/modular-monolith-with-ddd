@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-
-using CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.PricingStrategies;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.PricingStrategies;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Rules;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
+
+using System.Collections.Generic;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
 {

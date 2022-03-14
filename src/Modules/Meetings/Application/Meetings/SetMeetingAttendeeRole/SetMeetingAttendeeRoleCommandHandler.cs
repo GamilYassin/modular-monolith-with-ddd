@@ -3,8 +3,6 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.SetMeetingAttendeeRole
 {
     internal class SetMeetingAttendeeRoleCommandHandler : ICommandHandler<SetMeetingAttendeeRoleCommand>

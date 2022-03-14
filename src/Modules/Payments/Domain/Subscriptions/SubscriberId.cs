@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions
 {
     public class SubscriberId : TypedIdValueBase
     {

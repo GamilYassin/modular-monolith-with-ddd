@@ -1,5 +1,7 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.ArchitectureTests.SeedWork;
+
 using NetArchTest.Rules;
+
 using NUnit.Framework;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.ArchitectureTests.Module

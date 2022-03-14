@@ -1,13 +1,17 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.AcceptMeetingGroupProposal;
+using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Processing.Outbox;
+
+using Dapper;
+
+using MediatR;
+
+using Newtonsoft.Json;
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
 using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.AcceptMeetingGroupProposal;
-using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Processing.Outbox;
-using Dapper;
-using MediatR;
-using Newtonsoft.Json;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.SeedWork
 {

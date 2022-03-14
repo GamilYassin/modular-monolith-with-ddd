@@ -1,10 +1,5 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Administration.Domain.Members;
-
 
 namespace CompanyName.MyMeetings.Modules.Administration.Application.Members
 {

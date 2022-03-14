@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddMeetingComment
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddMeetingComment
 {
     internal class AddMeetingCommentCommandValidator : AbstractValidator<AddMeetingCommentCommand>
     {

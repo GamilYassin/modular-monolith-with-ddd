@@ -1,12 +1,15 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
+using CompanyName.MyMeetings.Modules.Meetings.Infrastructure;
+
+using NetArchTest.Rules;
+
+using NUnit.Framework;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
-using CompanyName.MyMeetings.Modules.Meetings.Infrastructure;
-using NetArchTest.Rules;
-using NUnit.Framework;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.ArchitectureTests.SeedWork
 {

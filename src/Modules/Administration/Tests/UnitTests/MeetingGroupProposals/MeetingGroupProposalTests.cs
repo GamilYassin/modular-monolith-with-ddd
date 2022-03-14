@@ -1,10 +1,11 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals;
+﻿using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Events;
 using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Rules;
 using CompanyName.MyMeetings.Modules.Administration.Domain.UnitTests.SeedWork;
-using CompanyName.MyMeetings.Modules.Administration.Domain.Users;
+
 using NUnit.Framework;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.UnitTests.MeetingGroupProposals
 {

@@ -1,5 +1,4 @@
 ﻿using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
-using MediatR;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands
 {

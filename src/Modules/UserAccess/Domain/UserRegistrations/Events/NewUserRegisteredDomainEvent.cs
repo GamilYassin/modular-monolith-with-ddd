@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations.Events
+﻿namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations.Events
 {
     public class NewUserRegisteredDomainEvent : DomainEventBase
     {

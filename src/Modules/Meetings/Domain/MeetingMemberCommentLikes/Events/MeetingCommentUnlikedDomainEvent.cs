@@ -1,8 +1,4 @@
-﻿
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Comments;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes.Events
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes.Events
 {
     public class MeetingCommentUnlikedDomainEvent : DomainEventBase
     {

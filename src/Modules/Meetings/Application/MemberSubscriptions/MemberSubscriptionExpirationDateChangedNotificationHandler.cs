@@ -1,9 +1,4 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.SetMeetingGroupExpirationDate;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Policies;
-
-
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscriptions
 {

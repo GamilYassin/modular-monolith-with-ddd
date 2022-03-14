@@ -2,8 +2,6 @@
 using CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscriptions.ChangeSubscriptionExpirationDateForMember;
 using CompanyName.MyMeetings.Modules.Payments.IntegrationEvents;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscriptions
 {
     public class SubscriptionExpirationDateChangedIntegrationEventHandler : INotificationHandler<SubscriptionExpirationDateChangedIntegrationEvent>

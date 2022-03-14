@@ -1,14 +1,10 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
+
+using Dapper;
+
 using System.Threading;
 using System.Threading.Tasks;
 using System.Transactions;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Outbox;
-
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.DomainEventsDispatching;
-using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
-using Dapper;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Processing
 {

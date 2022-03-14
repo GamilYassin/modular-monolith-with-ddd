@@ -1,6 +1,3 @@
-using System.Reflection.Metadata;
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals
 {
     public class MeetingGroupProposalStatus : ValueObjectBase

@@ -1,6 +1,4 @@
-﻿using System;
-
-using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {

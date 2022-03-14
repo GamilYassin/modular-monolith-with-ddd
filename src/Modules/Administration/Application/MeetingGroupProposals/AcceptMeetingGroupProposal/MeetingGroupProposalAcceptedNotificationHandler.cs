@@ -1,6 +1,4 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Administration.IntegrationEvents.MeetingGroupProposals;
+﻿using CompanyName.MyMeetings.Modules.Administration.IntegrationEvents.MeetingGroupProposals;
 
 using DomainPack.Contracts.MediatorContracts;
 using DomainPack.DomainEvents.EventBus;

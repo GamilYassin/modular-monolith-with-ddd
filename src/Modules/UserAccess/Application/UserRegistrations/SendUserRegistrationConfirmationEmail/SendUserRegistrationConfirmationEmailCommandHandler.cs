@@ -1,9 +1,9 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Emails;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
+
 using MediatR;
+
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Application.UserRegistrations.SendUserRegistrationConfirmationEmail
 {

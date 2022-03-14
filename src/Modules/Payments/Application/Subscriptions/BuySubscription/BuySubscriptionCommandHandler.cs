@@ -1,13 +1,12 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Payments.Application.PriceListItems;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Payers;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
+
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.BuySubscription
 {

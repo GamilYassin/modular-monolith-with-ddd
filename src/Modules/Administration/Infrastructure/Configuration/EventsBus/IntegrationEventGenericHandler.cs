@@ -2,8 +2,6 @@
 
 using DomainPack.DomainEvents.EventBus;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.EventsBus
 {
     internal class IntegrationEventGenericHandler<T> : IIntegrationEventHandler<T>

@@ -1,9 +1,8 @@
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.RenewSubscription;
-using MediatR;
+
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.MarkSubscriptionRenewalPaymentAsPaid
 {

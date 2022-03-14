@@ -1,7 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
     public class MeetingLimits : ValueObjectBase

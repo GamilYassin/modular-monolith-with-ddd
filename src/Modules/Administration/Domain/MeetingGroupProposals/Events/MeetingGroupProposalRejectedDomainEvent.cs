@@ -1,9 +1,4 @@
-﻿
-using DomainPack.DomainEvents;
-
-using System;
-
-namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Events
+﻿namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Events
 {
     internal class MeetingGroupProposalRejectedDomainEvent : DomainEventBase
     {

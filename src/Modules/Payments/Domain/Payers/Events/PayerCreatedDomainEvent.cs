@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.Payers.Events
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.Payers.Events
 {
     public class PayerCreatedDomainEvent : DomainEventBase
     {

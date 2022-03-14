@@ -1,13 +1,9 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Events;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.DomainEventsDispatching;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
-using Dapper;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
+
 using MediatR;
+
 using Newtonsoft.Json;
+
 using Serilog.Context;
 using Serilog.Core;
 using Serilog.Events;

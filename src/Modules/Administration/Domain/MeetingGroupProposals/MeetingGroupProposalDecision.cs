@@ -1,9 +1,4 @@
-﻿using DomainPack.Entities;
-
-using System;
-
-
-namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals
+﻿namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals
 {
     public class MeetingGroupProposalDecision : ValueObjectBase
     {
@@ -20,7 +15,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
         public Guid UserId { get; }
 
         public string Code { get; }
-                
+
         public string RejectReason { get; }
 
         internal static MeetingGroupProposalDecision NoDecision =>

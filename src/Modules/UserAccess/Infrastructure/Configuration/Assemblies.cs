@@ -1,5 +1,6 @@
-﻿using System.Reflection;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
+
+using System.Reflection;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration
 {

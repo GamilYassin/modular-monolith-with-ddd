@@ -1,8 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings
 {
     internal class MarkMeetingAttendeeFeeAsPayedCommandHandler : ICommandHandler<MarkMeetingAttendeeFeeAsPayedCommand>

@@ -1,6 +1,8 @@
 ﻿using Autofac;
+
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationEvents;
 using CompanyName.MyMeetings.Modules.UserAccess.IntegrationEvents;
+
 using DomainPack.DomainEvents.EventBus;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.EventsBus

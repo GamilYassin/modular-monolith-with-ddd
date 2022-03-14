@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals
 {
     public interface IMeetingGroupProposalRepository
     {

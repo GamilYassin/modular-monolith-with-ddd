@@ -1,6 +1,4 @@
-﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members
 {
     public class MeetingGroupMemberData
     {

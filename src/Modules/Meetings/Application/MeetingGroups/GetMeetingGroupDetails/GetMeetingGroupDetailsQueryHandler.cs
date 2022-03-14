@@ -1,7 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.GetMeetingGroupDetails
 {
     internal class GetMeetingGroupDetailsQueryHandler : IQueryHandler<GetMeetingGroupDetailsQuery, MeetingGroupDetailsDto>

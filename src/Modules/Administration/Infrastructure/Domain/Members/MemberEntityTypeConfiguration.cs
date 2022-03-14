@@ -1,4 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.Administration.Domain.Members;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

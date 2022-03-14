@@ -1,8 +1,5 @@
-﻿using System;
-using Autofac;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Emails;
+﻿using Autofac;
+
 using CompanyName.MyMeetings.Modules.Payments.Application.MeetingFees.MarkMeetingFeeAsPaid;
 using CompanyName.MyMeetings.Modules.Payments.Application.MeetingFees.MarkMeetingFeePaymentAsPaid;
 using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.CreateSubscription;
@@ -19,9 +16,12 @@ using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Media
 using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Processing;
 using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Processing.Outbox;
 using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Quartz;
-using Serilog.AspNetCore;
-using ILogger = Serilog.ILogger;
+
 using DomainPack.DomainEvents.EventBus;
+
+using Serilog.AspNetCore;
+
+using ILogger = Serilog.ILogger;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration
 {

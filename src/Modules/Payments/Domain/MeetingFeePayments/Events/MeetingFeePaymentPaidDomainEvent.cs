@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments.Events
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments.Events
 {
     public class MeetingFeePaymentPaidDomainEvent : DomainEventBase
     {

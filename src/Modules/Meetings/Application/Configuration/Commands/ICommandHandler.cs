@@ -1,7 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 
-using DomainPack.Contracts.MediatorContracts;
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands
 {
     public interface ICommandHandler<in TCommand> : IRequestHandler<TCommand>

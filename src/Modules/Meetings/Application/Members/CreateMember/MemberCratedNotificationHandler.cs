@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members.CreateMember
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members.CreateMember
 {
     public class MemberCratedNotificationHandler : INotificationHandler<MemberCreatedNotification>
     {

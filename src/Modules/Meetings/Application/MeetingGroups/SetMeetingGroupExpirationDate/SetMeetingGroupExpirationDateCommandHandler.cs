@@ -1,8 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.SetMeetingGroupExpirationDate
 {
     internal class SetMeetingGroupExpirationDateCommandHandler : ICommandHandler<SetMeetingGroupExpirationDateCommand>

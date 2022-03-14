@@ -1,4 +1,3 @@
-using System;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Payers;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments;
@@ -6,7 +5,10 @@ using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPayments
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.UnitTests.SeedWork;
+
 using NUnit.Framework;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.UnitTests.Subscriptions
 {

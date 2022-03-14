@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.UnitTests.SeedWork
 {
     public class DomainEventsTestHelper

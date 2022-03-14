@@ -1,9 +1,5 @@
 ﻿using DomainPack.Contracts.ValidationContracts;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
 {
     public class OnlyActiveAttendeeCanBeRemovedFromMeetingRule : IBusinessRule

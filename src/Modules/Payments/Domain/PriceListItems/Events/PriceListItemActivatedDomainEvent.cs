@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.Events
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.Events
 {
     public class PriceListItemActivatedDomainEvent : DomainEventBase
     {

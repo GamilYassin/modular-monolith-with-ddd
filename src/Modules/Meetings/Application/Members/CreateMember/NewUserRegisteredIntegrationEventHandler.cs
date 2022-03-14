@@ -1,8 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.UserAccess.IntegrationEvents;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members.CreateMember
 {
     public class NewUserRegisteredIntegrationEventHandler : INotificationHandler<NewUserRegisteredIntegrationEvent>

@@ -1,13 +1,6 @@
-﻿using System;
-using System.Reflection;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Events;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.DomainEventsDispatching;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
-using Dapper;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
 
+using Dapper;
 
 using Serilog.Context;
 using Serilog.Core;

@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.Users
+﻿namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.Users
 {
     public class UserRole : ValueObjectBase
     {

@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Domain.Members.MemberSubscriptions

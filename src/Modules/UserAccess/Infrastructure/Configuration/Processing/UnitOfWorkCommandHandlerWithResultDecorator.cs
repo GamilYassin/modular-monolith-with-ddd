@@ -1,11 +1,10 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
+using CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
+
+using Microsoft.EntityFrameworkCore;
+
 using System.Threading;
 using System.Threading.Tasks;
-
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
-using Microsoft.EntityFrameworkCore;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Processing
 {

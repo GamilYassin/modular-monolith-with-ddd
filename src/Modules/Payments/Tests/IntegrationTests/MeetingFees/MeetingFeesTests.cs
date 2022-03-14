@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
+﻿using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
 using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 using CompanyName.MyMeetings.Modules.Payments.Application.MeetingFees.CreateMeetingFee;
 using CompanyName.MyMeetings.Modules.Payments.Application.MeetingFees.CreateMeetingFeePayment;
@@ -11,7 +7,13 @@ using CompanyName.MyMeetings.Modules.Payments.Application.MeetingFees.MarkMeetin
 using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments;
 using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFees;
 using CompanyName.MyMeetings.Modules.Payments.IntegrationTests.SeedWork;
+
 using NUnit.Framework;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.IntegrationTests.MeetingFees
 {

@@ -1,9 +1,5 @@
-﻿using System;
-using Autofac;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Emails;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Emails;
+﻿using Autofac;
+
 using CompanyName.MyMeetings.Modules.UserAccess.Application.UserRegistrations.RegisterNewUser;
 using CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.DataAccess;
 using CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Domain;
@@ -15,6 +11,7 @@ using CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Pro
 using CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Processing.Outbox;
 using CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Quartz;
 using CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Security;
+
 using Serilog;
 using Serilog.AspNetCore;
 

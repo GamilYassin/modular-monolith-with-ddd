@@ -1,14 +1,15 @@
-﻿using System;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.AcceptMeetingGroupProposal;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.AcceptMeetingGroupProposal;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.ProposeMeetingGroup;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.CreateNewMeetingGroup;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.GetAuthenticationMemberMeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.GetMeetingGroupDetails;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.SeedWork;
+
 using NUnit.Framework;
+
+using System;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.MeetingGroups
 {

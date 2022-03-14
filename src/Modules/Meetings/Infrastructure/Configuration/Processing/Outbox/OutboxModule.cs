@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Autofac;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Events;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Outbox;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.DomainEventsDispatching;
+﻿using Autofac;
+
 using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Outbox;
+
 using Module = Autofac.Module;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Processing.Outbox

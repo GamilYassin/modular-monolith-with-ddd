@@ -1,14 +1,9 @@
-﻿using System;
-using System.Data;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
-using Dapper;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
+
 using MediatR;
+
 using Newtonsoft.Json;
+
 using Polly;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Processing.InternalCommands

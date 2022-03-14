@@ -2,8 +2,6 @@
 
 using DomainPack.Contracts.ValidationContracts;
 
-using System;
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Rules
 {
     public class MeetingCanBeOrganizedOnlyByPayedGroupRule : IBusinessRule

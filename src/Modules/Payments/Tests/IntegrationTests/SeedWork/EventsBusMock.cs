@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using DomainPack.DomainEvents.EventBus;
+
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DomainPack.DomainEvents.EventBus;
 
 namespace CompanyName.MyMeetings.Modules.Payments.IntegrationTests.SeedWork
 {

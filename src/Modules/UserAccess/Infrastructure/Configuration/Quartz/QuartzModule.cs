@@ -1,4 +1,5 @@
 ﻿using Autofac;
+
 using Quartz;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Quartz

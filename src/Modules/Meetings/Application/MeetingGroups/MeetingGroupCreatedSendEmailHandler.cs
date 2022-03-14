@@ -1,8 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.SendMeetingGroupCreatedEmail;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups
 {
     internal class MeetingGroupCreatedSendEmailHandler : INotificationHandler<MeetingGroupCreatedNotification>

@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments
 {
     public class SubscriptionPaymentStatus : ValueObjectBase
     {

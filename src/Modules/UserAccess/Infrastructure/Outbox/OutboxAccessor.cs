@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Outbox;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Outbox
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Application.Members.GetMember
 {

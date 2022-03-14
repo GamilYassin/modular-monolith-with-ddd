@@ -1,10 +1,10 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFees;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Payers;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
+
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.MeetingFees.CreateMeetingFee
 {

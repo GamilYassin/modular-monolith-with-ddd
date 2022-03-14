@@ -1,5 +1,7 @@
 ﻿using CompanyName.MyMeetings.Modules.Payments.ArchTests.SeedWork;
+
 using NetArchTest.Rules;
+
 using NUnit.Framework;
 
 namespace CompanyName.MyMeetings.Modules.Payments.ArchTests.Module

@@ -1,6 +1,3 @@
-using System;
-
-
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPayments.Events
 {
     public class SubscriptionRenewalPaymentPaidDomainEvent : DomainEventBase

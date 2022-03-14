@@ -1,7 +1,7 @@
-﻿using System;
-using System.Linq;
+﻿using NUnit.Framework;
 
-using NUnit.Framework;
+using System;
+using System.Linq;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UnitTests.SeedWork
 {

@@ -15,7 +15,6 @@ using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration
 
 using DomainPack.DomainEvents.EventBus;
 
-
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration
 {
     public class AdministrationStartup

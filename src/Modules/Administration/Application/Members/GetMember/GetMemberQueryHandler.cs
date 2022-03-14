@@ -1,7 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
 
-using Dapper;
-
 namespace CompanyName.MyMeetings.Modules.Administration.Application.Members.GetMember
 {
     internal class GetMemberQueryHandler : IQueryHandler<GetMemberQuery, MemberDto>

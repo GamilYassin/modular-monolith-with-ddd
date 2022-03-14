@@ -1,5 +1,4 @@
-﻿
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Events;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Rules;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
@@ -10,7 +9,6 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals
 {
     public class MeetingGroupProposal : EntityObjectBase<Guid>, IAggregateRoot
     {
-
         private string _name;
 
         private string _description;
@@ -32,7 +30,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals
             string name,
             string description,
             MeetingGroupLocation location,
-            Guid proposalUserId) 
+            Guid proposalUserId)
             : base(Guid.NewGuid())
         {
             _name = name;

@@ -1,13 +1,14 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
+
+using Dapper;
+
+using MediatR;
+
+using Newtonsoft.Json;
+
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
-using Dapper;
-using MediatR;
-using Newtonsoft.Json;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Processing.Inbox
 {

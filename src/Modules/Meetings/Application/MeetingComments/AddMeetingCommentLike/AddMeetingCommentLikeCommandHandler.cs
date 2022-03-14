@@ -4,8 +4,6 @@ using CompanyName.MyMeetings.Modules.Meetings.Application.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddMeetingCommentLike
 {
     internal class AddMeetingCommentLikeCommandHandler : ICommandHandler<AddMeetingCommentLikeCommand>

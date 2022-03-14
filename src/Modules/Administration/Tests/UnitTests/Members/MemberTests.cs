@@ -1,8 +1,10 @@
-using System;
 using CompanyName.MyMeetings.Modules.Administration.Domain.Members;
 using CompanyName.MyMeetings.Modules.Administration.Domain.Members.Events;
 using CompanyName.MyMeetings.Modules.Administration.Domain.UnitTests.SeedWork;
+
 using NUnit.Framework;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.UnitTests.Members
 {

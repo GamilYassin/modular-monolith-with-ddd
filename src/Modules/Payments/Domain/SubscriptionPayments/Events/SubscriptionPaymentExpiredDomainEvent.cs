@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Events
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Events
 {
     public class SubscriptionPaymentExpiredDomainEvent : DomainEventBase
     {

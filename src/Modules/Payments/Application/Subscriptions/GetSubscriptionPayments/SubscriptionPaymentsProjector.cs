@@ -1,13 +1,13 @@
-﻿using System.Data;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-
-using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Projections;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Projections;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPayments.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions.Events;
+
 using Dapper;
+
+using System.Data;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.GetSubscriptionPayments
 {

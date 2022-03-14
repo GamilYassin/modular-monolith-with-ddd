@@ -1,5 +1,3 @@
-using System;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPayments.Events;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.MarkSubscriptionRenewalPaymentAsPaid

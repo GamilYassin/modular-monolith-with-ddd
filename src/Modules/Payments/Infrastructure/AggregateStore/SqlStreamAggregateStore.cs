@@ -1,15 +1,14 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
+using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration;
+
+using Newtonsoft.Json;
+
+using SqlStreamStore;
+using SqlStreamStore.Streams;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Serialization;
-using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
-using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration;
-using Newtonsoft.Json;
-using SqlStreamStore;
-using SqlStreamStore.Streams;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.AggregateStore
 {

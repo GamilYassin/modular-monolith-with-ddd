@@ -1,8 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
 using CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.GetMeetingGroupProposal;
 
-using Dapper;
-
 namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.GetMeetingGroupProposals
 {
     internal class GetMeetingGroupProposalsQueryHandler : IQueryHandler<GetMeetingGroupProposalsQuery, List<MeetingGroupProposalDto>>

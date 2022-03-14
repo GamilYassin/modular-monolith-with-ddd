@@ -1,9 +1,4 @@
-﻿
-using DomainPack.Entities;
-
-using System.Collections.Generic;
-
-namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals
+﻿namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals
 {
     public class MeetingGroupLocation : ValueObjectBase
     {
@@ -21,6 +16,5 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
         {
             return new MeetingGroupLocation(city, countryCode);
         }
-
     }
 }

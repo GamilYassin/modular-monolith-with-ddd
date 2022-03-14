@@ -1,7 +1,4 @@
-﻿
-using DomainPack.DomainEvents;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events
 {
     public class MeetingGroupGeneralAttributesEditedDomainEvent : DomainEventBase
     {

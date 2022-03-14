@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
+﻿using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
 using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.BuySubscription;
 using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.GetPayerSubscription;
@@ -11,7 +8,12 @@ using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
 using CompanyName.MyMeetings.Modules.Payments.IntegrationTests.PriceList;
 using CompanyName.MyMeetings.Modules.Payments.IntegrationTests.SeedWork;
+
 using NUnit.Framework;
+
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.IntegrationTests.Subscriptions
 {

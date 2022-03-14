@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork.Rules
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork.Rules
 {
     public class ValueOfMoneyMustNotBeNegativeRule : IBusinessRule
     {

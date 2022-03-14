@@ -1,10 +1,7 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfigurations.GetMeetingCommentingConfiguration;
-
-
+using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations;
+using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.EditMeetingComment
 {

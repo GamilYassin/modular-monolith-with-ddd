@@ -1,11 +1,13 @@
-﻿using System;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
+﻿using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
 using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 using CompanyName.MyMeetings.Modules.Payments.Application.Payers.CreatePayer;
 using CompanyName.MyMeetings.Modules.Payments.Application.Payers.GetPayer;
 using CompanyName.MyMeetings.Modules.Payments.IntegrationTests.SeedWork;
+
 using NUnit.Framework;
+
+using System;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.IntegrationTests.Payers
 {

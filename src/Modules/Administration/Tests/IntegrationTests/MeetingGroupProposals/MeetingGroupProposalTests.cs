@@ -1,12 +1,13 @@
-﻿using System.Threading.Tasks;
-
-using CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.AcceptMeetingGroupProposal;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.AcceptMeetingGroupProposal;
 using CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.GetMeetingGroupProposal;
 using CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.RequestMeetingGroupProposalVerification;
 using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Rules;
 using CompanyName.MyMeetings.Modules.Administration.IntegrationTests.SeedWork;
+
 using NUnit.Framework;
+
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Administration.IntegrationTests.MeetingGroupProposals
 {

@@ -1,7 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.SendMeetingAttendeeAddedEmail
 {
     internal class MeetingAttendeeAddedNotificationHandler : INotificationHandler<MeetingAttendeeAddedNotification>

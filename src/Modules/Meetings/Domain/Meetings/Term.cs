@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
     public class Term : ValueObjectBase
     {

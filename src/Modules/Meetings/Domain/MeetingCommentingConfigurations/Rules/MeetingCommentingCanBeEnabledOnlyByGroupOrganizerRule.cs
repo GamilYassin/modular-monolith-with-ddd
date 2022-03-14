@@ -1,9 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
 using DomainPack.Contracts.ValidationContracts;
-
-using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations.Rules
 {

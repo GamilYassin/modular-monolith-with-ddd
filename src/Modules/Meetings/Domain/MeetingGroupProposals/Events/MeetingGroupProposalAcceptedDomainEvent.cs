@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Events
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Events
 {
     public class MeetingGroupProposalAcceptedDomainEvent : DomainEventBase
     {

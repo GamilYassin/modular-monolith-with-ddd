@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Rules;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.SeedWork;
+
 using NUnit.Framework;
+
+using System;
+using System.Collections.Generic;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.MeetingGroups
 {

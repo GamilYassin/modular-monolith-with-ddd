@@ -1,7 +1,4 @@
-﻿
-using DomainPack.Entities;
-
-namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals
+﻿namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals
 {
     public class MeetingGroupProposalStatus : ValueObjectBase
     {

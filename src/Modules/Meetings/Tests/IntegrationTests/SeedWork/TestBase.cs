@@ -1,23 +1,25 @@
-using System;
-using System.Data;
-using System.Data.SqlClient;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Emails;
-
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Emails;
 using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests;
 using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
 using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 using CompanyName.MyMeetings.Modules.Meetings.Infrastructure;
 using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration;
+
 using Dapper;
+
 using MediatR;
+
 using NSubstitute;
+
 using NUnit.Framework;
+
 using Serilog;
+
+using System;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.SeedWork
 {

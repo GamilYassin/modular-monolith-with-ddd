@@ -1,7 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
 
-using Dapper;
-
 using DomainPack.Contracts.MediatorContracts;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Processing.Inbox

@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
+using CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
+
+using FluentValidation;
+
+using MediatR;
+
+using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
-using FluentValidation;
-using MediatR;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Processing
 {

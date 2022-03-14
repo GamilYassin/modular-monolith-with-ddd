@@ -1,4 +1,5 @@
 ﻿using Autofac;
+
 using CompanyName.MyMeetings.Modules.UserAccess.Application.UserRegistrations;
 using CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations;
 

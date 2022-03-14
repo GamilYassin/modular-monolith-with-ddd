@@ -2,8 +2,6 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration
 {
     internal class MeetingCreatedEventHandler : INotificationHandler<MeetingCreatedDomainEvent>

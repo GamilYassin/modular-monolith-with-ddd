@@ -1,4 +1,5 @@
 ﻿using Autofac;
+
 using Serilog;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Logging

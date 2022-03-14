@@ -1,8 +1,9 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Queries;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Queries;
+
 using Dapper;
+
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.Payers.GetPayer
 {

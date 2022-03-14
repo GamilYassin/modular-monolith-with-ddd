@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Queries;
+
+using Dapper;
+
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Queries;
-using Dapper;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.GetSubscriptionPayments
 {

@@ -1,12 +1,15 @@
-﻿using System.Collections.Specialized;
-using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Processing.Inbox;
+﻿using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Processing.Inbox;
 using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Processing.InternalCommands;
 using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Processing.Outbox;
 using CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Quartz.Jobs;
+
 using Quartz;
 using Quartz.Impl;
 using Quartz.Logging;
+
 using Serilog;
+
+using System.Collections.Specialized;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Quartz
 {

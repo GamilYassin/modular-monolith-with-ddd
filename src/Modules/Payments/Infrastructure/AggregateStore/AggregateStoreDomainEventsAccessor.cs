@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 
 using DomainPack.Contracts.EventsContracts;
+
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.AggregateStore
 {

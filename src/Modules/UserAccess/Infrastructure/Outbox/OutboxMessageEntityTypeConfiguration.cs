@@ -1,5 +1,4 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Application.Outbox;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Outbox

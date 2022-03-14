@@ -1,6 +1,4 @@
-﻿using System;
-
-using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments.Events;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFees;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 

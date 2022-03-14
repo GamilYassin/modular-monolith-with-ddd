@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.Users
+﻿namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.Users
 {
     public class UserId : TypedIdValueBase
     {

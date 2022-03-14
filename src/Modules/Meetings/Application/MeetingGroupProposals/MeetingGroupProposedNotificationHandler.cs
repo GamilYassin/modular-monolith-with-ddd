@@ -2,8 +2,6 @@
 
 using DomainPack.DomainEvents.EventBus;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals
 {
     public class MeetingGroupProposedNotificationHandler : INotificationHandler<MeetingGroupProposedNotification>

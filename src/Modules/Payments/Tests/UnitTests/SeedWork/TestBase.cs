@@ -1,9 +1,10 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
+
+using NUnit.Framework;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
-using NUnit.Framework;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.UnitTests.SeedWork
 {

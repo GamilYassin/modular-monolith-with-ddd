@@ -1,5 +1,4 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.Payments.Domain.Payers;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.Payers;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Authentication
 {

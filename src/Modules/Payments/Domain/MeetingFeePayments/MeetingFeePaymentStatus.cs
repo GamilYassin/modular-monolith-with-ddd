@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments
 {
     public class MeetingFeePaymentStatus : ValueObjectBase
     {

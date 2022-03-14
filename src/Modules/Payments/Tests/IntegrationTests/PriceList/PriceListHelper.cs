@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
+﻿using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
 using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 using CompanyName.MyMeetings.Modules.Payments.Application.PriceListItems;
 using CompanyName.MyMeetings.Modules.Payments.Application.PriceListItems.CreatePriceListItem;
 using CompanyName.MyMeetings.Modules.Payments.Application.PriceListItems.GetPriceListItems;
 using CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
-using CompanyName.MyMeetings.Modules.Payments.Infrastructure;
 using CompanyName.MyMeetings.Modules.Payments.IntegrationTests.SeedWork;
-using CompanyName.MyMeetings.Modules.Payments.IntegrationTests.Subscriptions;
+
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.IntegrationTests.PriceList
 {

@@ -1,22 +1,17 @@
-﻿using System;
-
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Comments.Events;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Comments.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments.Rules;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 using DomainPack.Contracts.EntitiesContracts;
-using DomainPack.Entities;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
 {
     public class MeetingComment : EntityObjectBase<Guid>, IAggregateRoot
     {
-
         private Guid _meetingId;
 
         private Guid _authorId;
@@ -46,7 +41,6 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
             this.CheckRule(new CommentCanBeCreatedOnlyIfCommentingForMeetingEnabledRule(meetingCommentingConfiguration));
             this.CheckRule(new CommentCanBeAddedOnlyByMeetingGroupMemberRule(authorId, meetingGroup));
 
-            
             _meetingId = meetingId;
             _authorId = authorId;
             _comment = comment;

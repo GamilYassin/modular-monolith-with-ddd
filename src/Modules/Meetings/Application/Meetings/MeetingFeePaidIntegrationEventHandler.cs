@@ -1,8 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Payments.IntegrationEvents;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings
 {
     public class MeetingFeePaidIntegrationEventHandler : INotificationHandler<MeetingFeePaidIntegrationEvent>

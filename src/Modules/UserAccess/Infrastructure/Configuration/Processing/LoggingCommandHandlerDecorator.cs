@@ -1,14 +1,15 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
+
 using MediatR;
+
 using Serilog;
 using Serilog.Context;
 using Serilog.Core;
 using Serilog.Events;
+
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Processing
 {

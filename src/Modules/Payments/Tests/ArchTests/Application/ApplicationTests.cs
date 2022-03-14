@@ -1,16 +1,20 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Queries;
 using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 using CompanyName.MyMeetings.Modules.Payments.ArchTests.SeedWork;
+
 using FluentValidation;
-using MediatR;
+
 using NetArchTest.Rules;
+
 using Newtonsoft.Json;
+
 using NUnit.Framework;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace CompanyName.MyMeetings.Modules.Payments.ArchTests.Application
 {

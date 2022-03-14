@@ -1,14 +1,11 @@
-﻿using System.Collections.Generic;
-using Autofac;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
+﻿using Autofac;
+
 using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Projections;
-using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.GetSubscriptionDetails;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 using CompanyName.MyMeetings.Modules.Payments.Infrastructure.AggregateStore;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+
 using Microsoft.Extensions.Logging;
+
 using SqlStreamStore;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.DataAccess

@@ -1,12 +1,13 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
+
+using Dapper;
+
+using Newtonsoft.Json;
+
+using Polly;
+
 using System.Threading;
 using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
-using Dapper;
-using MediatR;
-using Newtonsoft.Json;
-using Polly;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Processing.InternalCommands
 {

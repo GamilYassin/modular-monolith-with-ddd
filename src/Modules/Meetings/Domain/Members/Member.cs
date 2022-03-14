@@ -1,6 +1,4 @@
-﻿
-
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members.Events;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Members.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 using DomainPack.Contracts.EntitiesContracts;
@@ -9,7 +7,6 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members
 {
     public class Member : EntityObjectBase<Guid>, IAggregateRoot
     {
-
         private string _login;
 
         private string _email;
@@ -32,7 +29,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members
             throw new NotImplementedException();
         }
 
-        private Member(Guid id, string login, string email, string firstName, string lastName, string name) 
+        private Member(Guid id, string login, string email, string firstName, string lastName, string name)
             : base(id)
         {
             _login = login;

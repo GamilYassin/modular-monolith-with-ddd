@@ -1,9 +1,4 @@
-﻿
-using DomainPack.DomainEvents;
-
-using System;
-
-namespace CompanyName.MyMeetings.Modules.Administration.Domain.Members.Events
+﻿namespace CompanyName.MyMeetings.Modules.Administration.Domain.Members.Events
 {
     public class MemberCreatedDomainEvent : DomainEventBase
     {

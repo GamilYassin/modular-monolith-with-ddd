@@ -12,4 +12,15 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Contracts\DomainPack.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.DomainEvents\DomainPack.DomainEvents.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Entities\DomainPack.Entities.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Exceptions\DomainPack.Exceptions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Logger\DomainPack.Logger.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Mediator\DomainPack.Mediator.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Serializer\DomainPack.Serializer.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.SharedKernel\DomainPack.SharedKernel.csproj" />
+  </ItemGroup>
+
 </Project>

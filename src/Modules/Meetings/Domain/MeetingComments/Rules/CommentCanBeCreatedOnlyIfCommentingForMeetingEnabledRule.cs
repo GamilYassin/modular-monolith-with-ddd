@@ -1,5 +1,4 @@
-﻿
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations;
 
 using DomainPack.Contracts.ValidationContracts;
 

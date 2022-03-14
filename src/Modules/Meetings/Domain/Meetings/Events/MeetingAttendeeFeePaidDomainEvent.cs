@@ -1,8 +1,4 @@
-﻿using System;
-
-using DomainPack.DomainEvents;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events
 {
     public class MeetingAttendeeFeePaidDomainEvent : DomainEventBase
     {

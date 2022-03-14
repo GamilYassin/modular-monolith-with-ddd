@@ -1,10 +1,10 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
+
+using NUnit.Framework;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-
-using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
-using NUnit.Framework;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.SeedWork
 {

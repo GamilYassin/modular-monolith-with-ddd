@@ -1,9 +1,8 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
+using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
+
 using System.Threading;
 using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Processing
 {

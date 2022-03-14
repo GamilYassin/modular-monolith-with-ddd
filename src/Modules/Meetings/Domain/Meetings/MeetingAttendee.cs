@@ -1,11 +1,7 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
-
-using DomainPack.Entities;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
@@ -37,13 +33,13 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         private bool _isFeePaid;
 
-         internal static MeetingAttendee CreateNew(
-            Guid meetingId,
-            Guid attendeeId,
-            DateTime decisionDate,
-            MeetingAttendeeRole role,
-            int guestsNumber,
-            Money eventFee)
+        internal static MeetingAttendee CreateNew(
+           Guid meetingId,
+           Guid attendeeId,
+           DateTime decisionDate,
+           MeetingAttendeeRole role,
+           int guestsNumber,
+           Money eventFee)
         {
             return new MeetingAttendee(meetingId, attendeeId, decisionDate, role, guestsNumber, eventFee);
         }

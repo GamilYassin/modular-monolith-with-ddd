@@ -1,6 +1,4 @@
-﻿using System;
-
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions.Events;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions.Events;
 
 using DomainPack.Contracts.EntitiesContracts;
 
@@ -8,7 +6,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscript
 {
     public class MemberSubscription : EntityObjectBase<Guid>, IAggregateRoot
     {
-              private DateTime _expirationDate;
+        private DateTime _expirationDate;
 
         private MemberSubscription(Guid memberId, DateTime expirationDate)
             : base(memberId)

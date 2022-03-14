@@ -3,7 +3,9 @@ using CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations;
 using CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations.Events;
 using CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations.Rules;
 using CompanyName.MyMeetings.Modules.UserAccess.Domain.Users.Events;
+
 using NSubstitute;
+
 using NUnit.Framework;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UnitTests.UserRegistrations

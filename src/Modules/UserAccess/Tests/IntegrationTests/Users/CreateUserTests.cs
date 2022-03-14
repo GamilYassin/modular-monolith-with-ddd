@@ -1,12 +1,13 @@
-﻿using System;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.UserRegistrations.ConfirmUserRegistration;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.UserRegistrations.ConfirmUserRegistration;
 using CompanyName.MyMeetings.Modules.UserAccess.Application.UserRegistrations.RegisterNewUser;
 using CompanyName.MyMeetings.Modules.UserAccess.Application.Users.GetUser;
-using CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations;
+
 using CompanyNames.MyMeetings.Modules.UserAccess.IntegrationTests.SeedWork;
 using CompanyNames.MyMeetings.Modules.UserAccess.IntegrationTests.UserRegistrations;
+
 using NUnit.Framework;
+
+using System.Threading.Tasks;
 
 namespace CompanyNames.MyMeetings.Modules.UserAccess.IntegrationTests.Users
 {

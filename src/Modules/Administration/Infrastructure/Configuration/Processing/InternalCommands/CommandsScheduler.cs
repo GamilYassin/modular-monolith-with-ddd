@@ -2,7 +2,6 @@
 
 using DomainPack.Contracts.CQSContracts;
 
-
 using ICommandsScheduler = DomainPack.Contracts.CQSContracts.ICommandsScheduler;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Processing.InternalCommands

@@ -1,5 +1,4 @@
-﻿using System;
-using DomainPack.DomainEvents.EventBus;
+﻿using DomainPack.DomainEvents.EventBus;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.IntegrationEvents
 {

@@ -1,6 +1,5 @@
 ﻿using Autofac;
 
-
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Logging
 {
     internal class LoggingModule : Autofac.Module

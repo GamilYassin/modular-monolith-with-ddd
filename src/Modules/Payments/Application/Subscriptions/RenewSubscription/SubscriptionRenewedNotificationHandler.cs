@@ -1,8 +1,9 @@
+using CompanyName.MyMeetings.Modules.Payments.IntegrationEvents;
+
+using DomainPack.DomainEvents.EventBus;
+
 using System.Threading;
 using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Payments.IntegrationEvents;
-using MediatR;
-using DomainPack.DomainEvents.EventBus;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.RenewSubscription
 {

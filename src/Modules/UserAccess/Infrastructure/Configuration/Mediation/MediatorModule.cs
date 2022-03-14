@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Core;
+using Autofac.Features.Variance;
+
+using FluentValidation;
+
+using MediatR;
+using MediatR.Pipeline;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Autofac;
-using Autofac.Core;
-using Autofac.Features.Variance;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands;
-using FluentValidation;
-using MediatR;
-using MediatR.Pipeline;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Mediation
 {

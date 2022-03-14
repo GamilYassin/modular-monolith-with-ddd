@@ -1,5 +1,4 @@
-﻿
-using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork.Rules;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork.Rules;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork
 {

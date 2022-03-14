@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
 {
     public class MeetingGroupMemberRole : ValueObjectBase
     {

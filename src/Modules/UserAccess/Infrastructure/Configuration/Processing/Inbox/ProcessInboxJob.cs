@@ -1,5 +1,6 @@
-﻿using System.Threading.Tasks;
-using Quartz;
+﻿using Quartz;
+
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration.Processing.Inbox
 {

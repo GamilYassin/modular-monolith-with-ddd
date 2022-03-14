@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Domain.Members

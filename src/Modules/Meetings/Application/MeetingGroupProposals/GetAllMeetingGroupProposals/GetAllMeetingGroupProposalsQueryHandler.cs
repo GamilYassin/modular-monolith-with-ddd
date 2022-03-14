@@ -1,8 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.GetMeetingGroupProposal;
 
-using DomainPack.CQS.Quries;
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.GetAllMeetingGroupProposals
 {
     internal class GetAllMeetingGroupProposalsQueryHandler : IQueryHandler<GetAllMeetingGroupProposalsQuery, List<MeetingGroupProposalDto>>

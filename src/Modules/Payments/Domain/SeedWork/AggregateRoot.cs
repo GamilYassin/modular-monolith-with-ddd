@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork
 {

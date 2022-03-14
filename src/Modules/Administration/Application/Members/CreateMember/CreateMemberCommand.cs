@@ -1,6 +1,4 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Administration.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
 
 using Newtonsoft.Json;
 

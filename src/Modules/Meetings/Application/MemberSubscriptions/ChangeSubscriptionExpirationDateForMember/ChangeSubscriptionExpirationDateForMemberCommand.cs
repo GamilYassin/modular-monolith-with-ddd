@@ -1,12 +1,9 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscriptions.ChangeSubscriptionExpirationDateForMember
 {
     public class ChangeSubscriptionExpirationDateForMemberCommand : InternalCommandBase
     {
-        
         public ChangeSubscriptionExpirationDateForMemberCommand(
             Guid id,
             Guid memberId,

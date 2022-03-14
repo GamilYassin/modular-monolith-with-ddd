@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.Payers
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.Payers
 {
     public class PayerId : TypedIdValueBase
     {

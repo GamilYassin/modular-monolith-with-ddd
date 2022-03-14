@@ -1,7 +1,4 @@
-﻿using System;
-using MediatR;
-
-namespace CompanyName.MyMeetings.Modules.Payments.Application.Contracts
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Application.Contracts
 {
     public interface ICommand<out TResult> : IRequest<TResult>
     {

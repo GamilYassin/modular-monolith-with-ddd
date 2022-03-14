@@ -1,10 +1,12 @@
-﻿using System.Threading.Tasks;
-using Autofac;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Serialization;
+﻿using Autofac;
+
 using Dapper;
-using Newtonsoft.Json;
+
 using DomainPack.DomainEvents.EventBus;
+
+using Newtonsoft.Json;
+
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.EventsBus
 {

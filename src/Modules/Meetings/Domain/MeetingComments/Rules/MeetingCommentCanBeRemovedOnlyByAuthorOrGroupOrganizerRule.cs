@@ -1,6 +1,4 @@
-﻿
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 
 using DomainPack.Contracts.ValidationContracts;
 

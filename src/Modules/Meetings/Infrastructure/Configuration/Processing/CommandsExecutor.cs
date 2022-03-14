@@ -1,6 +1,7 @@
-﻿using System.Threading.Tasks;
-using Autofac;
+﻿using Autofac;
+
 using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+
 using MediatR;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Processing

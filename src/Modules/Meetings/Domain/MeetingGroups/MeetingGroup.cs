@@ -1,21 +1,14 @@
-﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Rules;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
 using DomainPack.Contracts.EntitiesContracts;
-using DomainPack.Entities;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
 {
     public class MeetingGroup : EntityObjectBase<Guid>, IAggregateRoot
     {
-
         private string _name;
 
         private string _description;
@@ -40,8 +33,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
             return new MeetingGroup(meetingGroupProposalId, name, description, location, creatorId);
         }
 
-
-        private MeetingGroup(Guid meetingGroupProposalId, string name, string description, MeetingGroupLocation location, Guid creatorId): base(meetingGroupProposalId)
+        private MeetingGroup(Guid meetingGroupProposalId, string name, string description, MeetingGroupLocation location, Guid creatorId) : base(meetingGroupProposalId)
         {
             this._name = name;
             this._description = description;

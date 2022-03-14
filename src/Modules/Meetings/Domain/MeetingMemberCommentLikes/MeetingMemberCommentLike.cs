@@ -1,8 +1,4 @@
-﻿using System;
-
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Comments;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes.Events;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes.Events;
 
 using DomainPack.Contracts.EntitiesContracts;
 
@@ -10,7 +6,6 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLik
 {
     public class MeetingMemberCommentLike : EntityObjectBase<Guid>, IAggregateRoot
     {
-
         private Guid _meetingCommentId;
 
         private Guid _memberId;

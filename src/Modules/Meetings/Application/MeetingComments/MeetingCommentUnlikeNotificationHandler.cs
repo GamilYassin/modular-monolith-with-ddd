@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments
 {
     public class MeetingCommentUnlikeNotificationHandler : INotificationHandler<MeetingCommentUnlikedNotification>
     {

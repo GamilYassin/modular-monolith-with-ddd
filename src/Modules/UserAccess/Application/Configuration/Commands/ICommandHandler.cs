@@ -1,4 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
+
 using MediatR;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Commands

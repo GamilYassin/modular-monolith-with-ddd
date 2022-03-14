@@ -1,9 +1,9 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Queries;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Queries;
+
 using Dapper;
+
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Application.Users.GetUser
 {

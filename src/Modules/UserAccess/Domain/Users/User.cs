@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-
-using CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations;
 using CompanyName.MyMeetings.Modules.UserAccess.Domain.Users.Events;
+
+using System.Collections.Generic;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.Users
 {

@@ -1,8 +1,10 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Countries;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Countries;
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.SeedWork;
+
 using NUnit.Framework;
+
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.Countries
 {

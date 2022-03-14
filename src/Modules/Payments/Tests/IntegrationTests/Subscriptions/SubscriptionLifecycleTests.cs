@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
+﻿using CompanyName.MyMeetings.BuildingBlocks.IntegrationTests.Probing;
 using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.BuySubscription;
 using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.BuySubscriptionRenewal;
 using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.ExpireSubscriptions;
 using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.GetSubscriptionDetails;
-using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.GetSubscriptionPayments;
 using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.MarkSubscriptionPaymentAsPaid;
 using CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.MarkSubscriptionRenewalPaymentAsPaid;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
@@ -17,7 +12,12 @@ using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPayments
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
 using CompanyName.MyMeetings.Modules.Payments.IntegrationTests.PriceList;
 using CompanyName.MyMeetings.Modules.Payments.IntegrationTests.SeedWork;
+
 using NUnit.Framework;
+
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.IntegrationTests.Subscriptions
 {

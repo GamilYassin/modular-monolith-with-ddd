@@ -1,9 +1,6 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+
 using Serilog;
 using Serilog.Context;
 using Serilog.Core;

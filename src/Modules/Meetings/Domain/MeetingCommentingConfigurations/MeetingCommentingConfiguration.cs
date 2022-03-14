@@ -1,30 +1,24 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations.Events;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations.Rules;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
 using DomainPack.Contracts.EntitiesContracts;
-using DomainPack.Entities;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations
 {
     public class MeetingCommentingConfiguration : EntityObjectBase<Guid>, IAggregateRoot
     {
-
         private Guid _meetingId;
 
         private bool _isCommentingEnabled;
 
-        private MeetingCommentingConfiguration(Guid meetingId): base(Guid.NewGuid())
+        private MeetingCommentingConfiguration(Guid meetingId) : base(Guid.NewGuid())
         {
             this._meetingId = meetingId;
             this._isCommentingEnabled = true;
 
             this.AddDomainEvent(new MeetingCommentingConfigurationCreatedDomainEvent(this._meetingId, this._isCommentingEnabled));
         }
-
 
         public void EnableCommenting(Guid enablingMemberId, MeetingGroup meetingGroup)
         {

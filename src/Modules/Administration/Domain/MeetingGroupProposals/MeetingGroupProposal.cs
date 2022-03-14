@@ -1,11 +1,7 @@
-﻿using System;
-
-using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Events;
+﻿using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Events;
 using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Rules;
-using CompanyName.MyMeetings.Modules.Administration.Domain.Users;
 
 using DomainPack.Contracts.EntitiesContracts;
-using DomainPack.Entities;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals
 {
@@ -24,7 +20,6 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
         private MeetingGroupProposalStatus _status;
 
         private MeetingGroupProposalDecision _decision;
-
 
         private MeetingGroupProposal(
             Guid id,

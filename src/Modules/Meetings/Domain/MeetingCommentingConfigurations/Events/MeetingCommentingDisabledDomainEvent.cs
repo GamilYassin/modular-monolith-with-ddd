@@ -1,7 +1,4 @@
-﻿using System;
-using DomainPack.DomainEvents;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations.Events
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations.Events
 {
     public class MeetingCommentingDisabledDomainEvent : DomainEventBase
     {

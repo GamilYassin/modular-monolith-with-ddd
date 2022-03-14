@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Autofac.Core.Activators.Reflection;
+
 using System.Collections.Concurrent;
 using System.Linq;
 using System.Reflection;
-using Autofac.Core.Activators.Reflection;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Infrastructure.Configuration
 {

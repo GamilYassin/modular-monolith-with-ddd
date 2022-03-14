@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Security.Claims;
-using CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
+
 using IdentityServer4;
 using IdentityServer4.Models;
-using IdentityServer4.Test;
+
+using System.Collections.Generic;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Application.IdentityServer
 {

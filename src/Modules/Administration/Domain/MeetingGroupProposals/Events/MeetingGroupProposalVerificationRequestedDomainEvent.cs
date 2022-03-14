@@ -1,8 +1,4 @@
-﻿using System;
-
-using DomainPack.DomainEvents;
-
-namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Events
+﻿namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals.Events
 {
     public class MeetingGroupProposalVerificationRequestedDomainEvent : DomainEventBase
     {

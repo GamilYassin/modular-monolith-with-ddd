@@ -1,6 +1,4 @@
-﻿using System;
-
-using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPayments;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions.Events;
@@ -74,7 +72,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions
             return subscription;
         }
 
-        protected sealed override void Apply(IDomainEvent @event)
+        protected override sealed void Apply(IDomainEvent @event)
         {
             this.When((dynamic)@event);
         }

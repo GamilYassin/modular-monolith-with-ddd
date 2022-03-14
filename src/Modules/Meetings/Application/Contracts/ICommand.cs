@@ -1,6 +1,4 @@
-﻿using DomainPack.Contracts.MediatorContracts;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Contracts
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.Contracts
 {
     public interface ICommand<out TResult> : IRequest<TResult>
     {

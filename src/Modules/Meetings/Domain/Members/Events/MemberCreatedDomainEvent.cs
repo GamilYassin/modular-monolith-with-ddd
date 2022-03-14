@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members.Events
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members.Events
 {
     public class MemberCreatedDomainEvent : DomainEventBase
     {

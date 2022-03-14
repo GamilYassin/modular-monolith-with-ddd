@@ -2,8 +2,6 @@
 
 using DomainPack.DomainEvents.EventBus;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.SendMeetingAttendeeAddedEmail
 {
     internal class MeetingAttendeeAddedPublishEventNotificationHandler : INotificationHandler<MeetingAttendeeAddedNotification>

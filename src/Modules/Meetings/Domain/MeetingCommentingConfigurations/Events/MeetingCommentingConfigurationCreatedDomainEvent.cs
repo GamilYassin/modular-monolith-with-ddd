@@ -1,9 +1,4 @@
-﻿
-using DomainPack.DomainEvents;
-
-using System;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations.Events
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations.Events
 {
     public class MeetingCommentingConfigurationCreatedDomainEvent : DomainEventBase
     {

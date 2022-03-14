@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using Autofac;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Serialization;
-using Dapper;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
+﻿using Autofac;
+
 using DomainPack.DomainEvents.EventBus;
+
+using Newtonsoft.Json;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.EventsBus
 {

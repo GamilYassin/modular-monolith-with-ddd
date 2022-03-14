@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
 {
     public class PriceListItemCategory : ValueObjectBase
     {

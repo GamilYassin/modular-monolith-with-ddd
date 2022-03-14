@@ -3,6 +3,7 @@ using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Rules;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
+
 using NUnit.Framework;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.UnitTests.SubscriptionPayments

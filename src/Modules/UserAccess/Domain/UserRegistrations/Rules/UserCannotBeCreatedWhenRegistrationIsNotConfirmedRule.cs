@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations.Rules
+﻿namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations.Rules
 {
     public class UserCannotBeCreatedWhenRegistrationIsNotConfirmedRule : IBusinessRule
     {

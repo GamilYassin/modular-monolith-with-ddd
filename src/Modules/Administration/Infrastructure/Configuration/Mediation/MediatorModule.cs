@@ -8,10 +8,6 @@ using DomainPack.Mediator.Pipeline;
 
 using FluentValidation;
 
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Mediation

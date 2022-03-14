@@ -1,13 +1,15 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddMeetingComment;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddMeetingComment;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.EditMeetingComment;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.GetMeetingComments;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.SeedWork;
+
 using NUnit.Framework;
+
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+
 using static CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.Meetings.MeetingHelper;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.MeetingComments

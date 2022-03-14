@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Domain.MeetingGroupProposals

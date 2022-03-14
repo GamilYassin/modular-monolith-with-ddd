@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations.Events
+﻿namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations.Events
 {
     public class UserRegistrationExpiredDomainEvent : DomainEventBase
     {

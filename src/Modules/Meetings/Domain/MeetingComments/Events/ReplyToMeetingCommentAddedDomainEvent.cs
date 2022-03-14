@@ -1,6 +1,4 @@
-﻿
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Comments.Events
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Comments.Events
 {
     public class ReplyToMeetingCommentAddedDomainEvent : DomainEventBase
     {

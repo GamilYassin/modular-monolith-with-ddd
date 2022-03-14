@@ -1,6 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members
 {
     public class MembersQueryHelper

@@ -1,9 +1,8 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
+using CompanyName.MyMeetings.Modules.UserAccess.IntegrationEvents;
+
 using System.Threading;
 using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.UserAccess.IntegrationEvents;
-using MediatR;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.Payers.CreatePayer
 {

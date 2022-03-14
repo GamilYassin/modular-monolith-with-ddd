@@ -1,6 +1,6 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
+
 using System.Collections.Generic;
-using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.MeetingFees.GetMeetingFees
 {

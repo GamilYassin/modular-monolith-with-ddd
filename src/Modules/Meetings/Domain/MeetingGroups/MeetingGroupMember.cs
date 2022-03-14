@@ -1,9 +1,5 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
-
-using DomainPack.Entities;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
 {
@@ -20,7 +16,6 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
         private bool _isActive;
 
         private DateTime? _leaveDate;
-
 
         private MeetingGroupMember(
             Guid meetingGroupId,

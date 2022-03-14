@@ -1,8 +1,4 @@
-﻿using System;
-
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Events
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Events
 {
     public class MeetingGroupProposedDomainEvent : DomainEventBase
     {

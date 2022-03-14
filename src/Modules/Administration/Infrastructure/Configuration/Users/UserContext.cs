@@ -1,5 +1,4 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.Administration.Domain.Users;
+﻿using CompanyName.MyMeetings.Modules.Administration.Domain.Users;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Users
 {

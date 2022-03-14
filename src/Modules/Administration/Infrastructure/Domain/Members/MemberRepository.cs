@@ -2,8 +2,6 @@
 
 using Microsoft.EntityFrameworkCore;
 
-using System.Threading.Tasks;
-
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Domain.Members
 {
     internal class MemberRepository : IMemberRepository

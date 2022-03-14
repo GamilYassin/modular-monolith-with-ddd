@@ -1,9 +1,12 @@
 ﻿using Autofac;
+
 using CompanyName.MyMeetings.Modules.Administration.IntegrationEvents.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationEvents;
 using CompanyName.MyMeetings.Modules.UserAccess.IntegrationEvents;
-using Serilog;
+
 using DomainPack.DomainEvents.EventBus;
+
+using Serilog;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.EventsBus
 {

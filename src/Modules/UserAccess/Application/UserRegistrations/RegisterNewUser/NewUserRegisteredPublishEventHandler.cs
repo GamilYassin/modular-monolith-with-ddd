@@ -1,8 +1,11 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.UserAccess.IntegrationEvents;
-using MediatR;
+﻿using CompanyName.MyMeetings.Modules.UserAccess.IntegrationEvents;
+
 using DomainPack.DomainEvents.EventBus;
+
+using MediatR;
+
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Application.UserRegistrations.RegisterNewUser
 {

@@ -1,9 +1,11 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Comments.Events;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Comments.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments.Rules;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
 using NUnit.Framework;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.Meetings
 {

@@ -1,10 +1,10 @@
-﻿using System.Data;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-
-using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Projections;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Projections;
 using CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.Events;
+
 using Dapper;
+
+using System.Data;
+using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Application.PriceListItems.GetPriceListItem
 {

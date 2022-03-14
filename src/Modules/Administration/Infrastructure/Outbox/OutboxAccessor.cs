@@ -1,7 +1,4 @@
-﻿using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Outbox;
-
-namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Outbox
+﻿namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Outbox
 {
     internal class OutboxAccessor : IOutbox
     {

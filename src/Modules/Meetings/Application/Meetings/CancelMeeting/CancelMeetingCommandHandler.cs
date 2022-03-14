@@ -2,8 +2,6 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.CancelMeeting
 {
     internal class CancelMeetingCommandHandler : ICommandHandler<CancelMeetingCommand>

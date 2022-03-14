@@ -1,16 +1,20 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries;
 using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 using CompanyName.MyMeetings.Modules.Meetings.ArchitectureTests.SeedWork;
-using FluentValidation;
+
 using MediatR;
+
 using NetArchTest.Rules;
+
 using Newtonsoft.Json;
+
 using NUnit.Framework;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.ArchTests.Application
 {

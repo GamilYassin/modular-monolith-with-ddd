@@ -1,7 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
     public class MeetingWaitlistMember : EntityObjectBase<Guid>
@@ -20,7 +19,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         private DateTime? _movedToAttendeesDate;
 
-        private MeetingWaitlistMember(Guid meetingId, Guid memberId) 
+        private MeetingWaitlistMember(Guid meetingId, Guid memberId)
             : base(memberId)
         {
             this.MemberId = memberId;

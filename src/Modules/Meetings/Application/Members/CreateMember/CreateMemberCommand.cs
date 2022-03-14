@@ -1,12 +1,9 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members.CreateMember
 {
     public class CreateMemberCommand : InternalCommandBase
     {
-        
         public CreateMemberCommand(
             Guid id,
             Guid memberId,

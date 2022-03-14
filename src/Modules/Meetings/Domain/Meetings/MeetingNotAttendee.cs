@@ -1,10 +1,6 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
-
-using DomainPack.Entities;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
@@ -20,7 +16,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         private DateTime? _decisionChangeDate;
 
-        private MeetingNotAttendee(Guid meetingId, Guid memberId): base(default)
+        private MeetingNotAttendee(Guid meetingId, Guid memberId) : base(default)
         {
             this.MemberId = memberId;
             this.MeetingId = meetingId;

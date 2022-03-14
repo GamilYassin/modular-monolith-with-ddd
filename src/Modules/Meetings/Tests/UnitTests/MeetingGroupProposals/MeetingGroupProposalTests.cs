@@ -3,7 +3,6 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Event
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Rules;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.SeedWork;
 
 using NUnit.Framework;

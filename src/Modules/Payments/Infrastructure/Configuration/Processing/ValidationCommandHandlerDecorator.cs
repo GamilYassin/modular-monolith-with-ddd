@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
+using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
+
+using FluentValidation;
+
+using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
-using FluentValidation;
-using MediatR;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.Configuration.Processing
 {

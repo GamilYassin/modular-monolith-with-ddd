@@ -1,12 +1,14 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Payments.ArchTests.SeedWork;
+using CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems;
+
+using NetArchTest.Rules;
+
+using NUnit.Framework;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-
-using CompanyName.MyMeetings.Modules.Payments.ArchTests.SeedWork;
-using CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems;
-using NetArchTest.Rules;
-using NUnit.Framework;
 
 namespace CompanyName.MyMeetings.Modules.Payments.ArchTests.Domain
 {

@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-using CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
+
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Rules
 {
@@ -29,9 +29,9 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Ru
         }
 
         public bool IsBroken() => _priceListItems.Count(x =>
-                                      x.CountryCode == _countryCode &&
-                                      x.Category == _category &&
-                                      x.SubscriptionPeriod == _subscriptionPeriod) != 1;
+                                       x.CountryCode == _countryCode &&
+                                       x.Category == _category &&
+                                       x.SubscriptionPeriod == _subscriptionPeriod) != 1;
 
         public string Message => "Price for subscription must be defined";
     }

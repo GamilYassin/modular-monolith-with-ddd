@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments.Events;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFees.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Payers.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Events;
-using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPayments;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPayments.Events;
 using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions.Events;
+
+using System.Collections.Generic;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.AggregateStore
 {
