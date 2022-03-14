@@ -2,6 +2,6 @@
 {
     public interface IMemberContext
     {
-        MemberId MemberId { get; }
+        Guid MemberId { get; }
     }
 }

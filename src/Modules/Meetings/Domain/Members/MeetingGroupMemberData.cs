@@ -4,11 +4,11 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members
 {
     public class MeetingGroupMemberData
     {
-        public MeetingGroupId MeetingGroupId { get; }
+        public Guid MeetingGroupId { get; }
 
-        public MemberId MemberId { get; }
+        public Guid MemberId { get; }
 
-        public MeetingGroupMemberData(MeetingGroupId meetingGroupId, MemberId memberId)
+        public MeetingGroupMemberData(Guid meetingGroupId, Guid memberId)
         {
             MemberId = memberId;
             MeetingGroupId = meetingGroupId;

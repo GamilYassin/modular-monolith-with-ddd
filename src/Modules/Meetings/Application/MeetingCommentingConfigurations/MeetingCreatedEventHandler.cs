@@ -4,9 +4,6 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
 
 using MediatR;
 
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration
 {
     internal class MeetingCreatedEventHandler : INotificationHandler<MeetingCreatedDomainEvent>

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
+public interface IMeetingRepository
 {
-    public interface IMeetingRepository
-    {
-        Task AddAsync(Meeting meeting);
+    Task AddAsync(Meeting meeting);
 
-        Task<Meeting> GetByIdAsync(MeetingId id);
-    }
+    Task<Meeting> GetByIdAsync(Guid id);
 }

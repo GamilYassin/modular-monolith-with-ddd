@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.GetMeetingDetails
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.GetMeetingDetails
 {
     public class MeetingDetailsDto
     {

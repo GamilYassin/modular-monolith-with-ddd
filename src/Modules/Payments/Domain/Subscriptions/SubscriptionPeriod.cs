@@ -1,8 +1,8 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions
 {
-    public class SubscriptionPeriod : ValueObject
+    public class SubscriptionPeriod : ValueObjectBase
     {
         public string Code { get; }
 

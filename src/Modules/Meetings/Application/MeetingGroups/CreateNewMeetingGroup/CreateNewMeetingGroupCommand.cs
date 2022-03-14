@@ -1,6 +1,5 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
+
 using Newtonsoft.Json;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.CreateNewMeetingGroup

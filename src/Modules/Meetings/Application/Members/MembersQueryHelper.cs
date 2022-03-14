@@ -1,10 +1,6 @@
-﻿using System;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
 using System.Data;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
-using Dapper;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members
 {

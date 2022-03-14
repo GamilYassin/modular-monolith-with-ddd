@@ -1,8 +1,8 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
-    public class MeetingLocation : ValueObject
+    public class MeetingLocation : ValueObjectBase
     {
         public static MeetingLocation CreateNew(string name, string address, string postalCode, string city)
         {

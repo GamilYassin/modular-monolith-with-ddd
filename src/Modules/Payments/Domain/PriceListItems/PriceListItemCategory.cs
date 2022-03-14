@@ -1,8 +1,8 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
 {
-    public class PriceListItemCategory : ValueObject
+    public class PriceListItemCategory : ValueObjectBase
     {
         public static PriceListItemCategory New => new PriceListItemCategory(nameof(New));
 

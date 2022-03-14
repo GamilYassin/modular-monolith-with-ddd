@@ -1,9 +1,9 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork.Rules;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork
 {
-    public class MoneyValue : ValueObject
+    public class MoneyValue : ValueObjectBase
     {
         public decimal Value { get; }
 

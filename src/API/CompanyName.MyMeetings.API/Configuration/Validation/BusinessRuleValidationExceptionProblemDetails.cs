@@ -1,4 +1,4 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

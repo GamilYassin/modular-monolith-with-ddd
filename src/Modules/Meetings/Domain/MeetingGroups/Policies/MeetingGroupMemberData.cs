@@ -2,13 +2,13 @@
 {
     public class MeetingGroupMemberData
     {
-        public MeetingGroupMemberData(MeetingGroupId meetingGroupId, MeetingGroupMemberRole role)
+        public MeetingGroupMemberData(Guid meetingGroupId, MeetingGroupMemberRole role)
         {
             MeetingGroupId = meetingGroupId;
             Role = role;
         }
 
-        public MeetingGroupId MeetingGroupId { get; }
+        public Guid MeetingGroupId { get; }
 
         public MeetingGroupMemberRole Role { get; }
     }

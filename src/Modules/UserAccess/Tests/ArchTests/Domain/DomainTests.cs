@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
 using CompanyName.MyMeetings.Modules.UserAccess.ArchTests.SeedWork;
 using NetArchTest.Rules;
 using NUnit.Framework;

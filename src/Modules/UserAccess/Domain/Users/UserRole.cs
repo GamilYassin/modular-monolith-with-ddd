@@ -1,8 +1,8 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.Users
 {
-    public class UserRole : ValueObject
+    public class UserRole : ValueObjectBase
     {
         public static UserRole Member => new UserRole(nameof(Member));
 

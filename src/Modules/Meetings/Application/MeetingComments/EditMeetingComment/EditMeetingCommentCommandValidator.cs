@@ -1,6 +1,4 @@
-﻿using FluentValidation;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.EditMeetingComment
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.EditMeetingComment
 {
     internal class EditMeetingCommentCommandValidator : AbstractValidator<EditMeetingCommentCommand>
     {

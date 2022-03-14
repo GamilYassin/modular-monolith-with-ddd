@@ -1,8 +1,4 @@
 ﻿using System.Data;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Members;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
-using Dapper;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings
 {

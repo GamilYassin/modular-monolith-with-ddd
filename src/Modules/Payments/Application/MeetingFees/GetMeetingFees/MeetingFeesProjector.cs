@@ -2,7 +2,7 @@
 using System.Data;
 using System.Threading.Tasks;
 using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
 using CompanyName.MyMeetings.Modules.Payments.Application.Configuration.Projections;
 using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFees.Events;
 using Dapper;

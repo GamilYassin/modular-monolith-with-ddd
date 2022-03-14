@@ -1,4 +1,4 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Rules

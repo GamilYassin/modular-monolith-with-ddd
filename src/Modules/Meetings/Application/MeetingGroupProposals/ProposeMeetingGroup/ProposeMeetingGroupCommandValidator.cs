@@ -1,6 +1,4 @@
-﻿using FluentValidation;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.ProposeMeetingGroup
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals.ProposeMeetingGroup
 {
     internal class ProposeMeetingGroupCommandValidator : AbstractValidator<ProposeMeetingGroupCommand>
     {

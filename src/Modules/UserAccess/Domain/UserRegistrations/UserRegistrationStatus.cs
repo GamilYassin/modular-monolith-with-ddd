@@ -1,8 +1,8 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations
 {
-    public class UserRegistrationStatus : ValueObject
+    public class UserRegistrationStatus : ValueObjectBase
     {
         public static UserRegistrationStatus WaitingForConfirmation =>
             new UserRegistrationStatus(nameof(WaitingForConfirmation));

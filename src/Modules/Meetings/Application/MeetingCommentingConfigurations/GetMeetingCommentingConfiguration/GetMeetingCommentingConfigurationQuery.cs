@@ -1,7 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries;
 
-using System;
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.GetMeetingCommentingConfiguration
 {
     public class GetMeetingCommentingConfigurationQuery : QueryBase<MeetingCommentingConfigurationDto>

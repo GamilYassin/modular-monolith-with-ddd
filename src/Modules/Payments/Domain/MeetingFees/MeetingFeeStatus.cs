@@ -1,8 +1,8 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFees
 {
-    public class MeetingFeeStatus : ValueObject
+    public class MeetingFeeStatus : ValueObjectBase
     {
         public static MeetingFeeStatus WaitingForPayment => new MeetingFeeStatus(nameof(WaitingForPayment));
 

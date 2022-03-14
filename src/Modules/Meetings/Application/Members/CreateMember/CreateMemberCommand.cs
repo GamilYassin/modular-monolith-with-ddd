@@ -2,10 +2,6 @@
 
 using Newtonsoft.Json;
 
-using System;
-
-
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members.CreateMember
 {
     public class CreateMemberCommand : InternalCommandBase

@@ -1,5 +1,7 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.Contracts.ValidationContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments.Rules
 {

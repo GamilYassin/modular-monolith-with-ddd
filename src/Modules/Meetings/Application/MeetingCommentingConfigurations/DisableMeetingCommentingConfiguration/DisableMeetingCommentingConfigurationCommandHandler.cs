@@ -1,13 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
-using MediatR;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.DisbaleMeetingCommentingConfiguration
 {
@@ -32,13 +27,13 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingC
 
         public async Task<Unit> Handle(DisableMeetingCommentingConfigurationCommand command, CancellationToken cancellationToken)
         {
-            var meetingCommentingConfiguration = await _meetingCommentingConfigurationRepository.GetByMeetingIdAsync(new MeetingId(command.MeetingId));
+            var meetingCommentingConfiguration = await _meetingCommentingConfigurationRepository.GetByMeetingIdAsync(Guid.NewGuid());
             if (meetingCommentingConfiguration == null)
             {
                 throw new InvalidCommandException(new List<string> { "Meeting commenting configuration for disabling commenting must exist." });
             }
 
-            var meeting = await _meetingRepository.GetByIdAsync(new MeetingId(command.MeetingId));
+            var meeting = await _meetingRepository.GetByIdAsync(Guid.NewGuid());
 
             var meetingGroup = await _meetingGroupRepository.GetByIdAsync(meeting.GetMeetingGroupId());
 

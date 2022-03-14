@@ -1,8 +1,8 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
-    public class MeetingAttendeeRole : ValueObject
+    public class MeetingAttendeeRole : ValueObjectBase
     {
         public static MeetingAttendeeRole Host => new MeetingAttendeeRole("Host");
 

@@ -9,6 +9,6 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
 
         Task<int> Commit();
 
-        Task<MeetingGroup> GetByIdAsync(MeetingGroupId id);
+        Task<MeetingGroup> GetByIdAsync(Guid id);
     }
 }

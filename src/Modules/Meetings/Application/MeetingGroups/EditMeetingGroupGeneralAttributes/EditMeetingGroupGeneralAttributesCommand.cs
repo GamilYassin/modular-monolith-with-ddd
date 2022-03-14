@@ -1,6 +1,4 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
-using MediatR;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.EditMeetingGroupGeneralAttributes
 {

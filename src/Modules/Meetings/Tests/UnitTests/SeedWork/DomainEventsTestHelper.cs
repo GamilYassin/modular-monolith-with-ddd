@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.UnitTests.SeedWork
 {

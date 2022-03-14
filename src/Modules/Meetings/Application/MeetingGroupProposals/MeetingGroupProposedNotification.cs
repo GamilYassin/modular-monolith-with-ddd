@@ -1,6 +1,5 @@
-﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Events;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Events;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Events;
+
 using Newtonsoft.Json;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals

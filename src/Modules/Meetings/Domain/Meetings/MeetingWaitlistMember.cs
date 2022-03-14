@@ -1,9 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
-using DomainPack.Entities;
-
-using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
@@ -23,7 +20,8 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         private DateTime? _movedToAttendeesDate;
 
-        private MeetingWaitlistMember(Guid meetingId, Guid memberId)
+        private MeetingWaitlistMember(Guid meetingId, Guid memberId) 
+            : base(memberId)
         {
             this.MemberId = memberId;
             this.MeetingId = meetingId;
@@ -60,6 +58,11 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             _signOffDate = SystemClock.Now;
 
             this.AddDomainEvent(new MemberSignedOffFromMeetingWaitlistDomainEvent(this.MeetingId, this.MemberId));
+        }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
         }
     }
 }

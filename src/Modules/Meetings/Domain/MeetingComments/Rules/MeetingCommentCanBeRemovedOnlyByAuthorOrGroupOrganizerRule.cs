@@ -1,16 +1,18 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.Contracts.ValidationContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments.Rules
 {
     public class MeetingCommentCanBeRemovedOnlyByAuthorOrGroupOrganizerRule : IBusinessRule
     {
         private readonly MeetingGroup _meetingGroup;
-        private readonly MemberId _authorId;
-        private readonly MemberId _removingMemberId;
+        private readonly Guid _authorId;
+        private readonly Guid _removingMemberId;
 
-        public MeetingCommentCanBeRemovedOnlyByAuthorOrGroupOrganizerRule(MeetingGroup meetingGroup, MemberId authorId, MemberId removingMemberId)
+        public MeetingCommentCanBeRemovedOnlyByAuthorOrGroupOrganizerRule(MeetingGroup meetingGroup, Guid authorId, Guid removingMemberId)
         {
             _meetingGroup = meetingGroup;
             _authorId = authorId;

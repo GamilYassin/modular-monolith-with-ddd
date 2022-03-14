@@ -1,10 +1,8 @@
-﻿using System.Threading.Tasks;
-
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions
 {
     public interface IMemberSubscriptionRepository
     {
-        Task<MemberSubscription> GetByIdOptionalAsync(MemberSubscriptionId memberSubscriptionId);
+        Task<MemberSubscription> GetByIdOptionalAsync(Guid memberSubscriptionId);
 
         Task AddAsync(MemberSubscription memberSubscription);
     }

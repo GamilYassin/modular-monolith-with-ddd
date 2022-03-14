@@ -1,5 +1,5 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.Events
@@ -7,10 +7,10 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.E
     public class MeetingGroupProposedDomainEvent : DomainEventBase
     {
         public MeetingGroupProposedDomainEvent(
-            MeetingGroupProposalId meetingGroupProposalId,
+            Guid meetingGroupProposalId,
             string name,
             string description,
-            MemberId proposalUserId,
+            Guid proposalUserId,
             DateTime proposalDate,
             string locationCity,
             string locationCountryCode)
@@ -24,7 +24,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.E
             this.ProposalUserId = proposalUserId;
         }
 
-        public MeetingGroupProposalId MeetingGroupProposalId { get; }
+        public Guid MeetingGroupProposalId { get; }
 
         public string Name { get; }
 
@@ -34,7 +34,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals.E
 
         public string LocationCountryCode { get; }
 
-        public MemberId ProposalUserId { get; }
+        public Guid ProposalUserId { get; }
 
         public DateTime ProposalDate { get; }
     }

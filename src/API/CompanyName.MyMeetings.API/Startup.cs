@@ -10,7 +10,7 @@ using CompanyName.MyMeetings.API.Modules.Meetings;
 using CompanyName.MyMeetings.API.Modules.Payments;
 using CompanyName.MyMeetings.API.Modules.UserAccess;
 using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
 using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.Emails;
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration;
 using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration;

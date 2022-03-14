@@ -1,8 +1,8 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions
 {
-    public class SubscriptionStatus : ValueObject
+    public class SubscriptionStatus : ValueObjectBase
     {
         public static SubscriptionStatus Active => new SubscriptionStatus(nameof(Active));
 

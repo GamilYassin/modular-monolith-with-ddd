@@ -1,4 +1,4 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.UserAccess.Domain.UserRegistrations.Rules
 {

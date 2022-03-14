@@ -1,5 +1,4 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members
 {
@@ -12,6 +11,6 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members
             this._executionContextAccessor = executionContextAccessor;
         }
 
-        public MemberId MemberId => new MemberId(_executionContextAccessor.UserId);
+        public Guid MemberId => new MemberId(_executionContextAccessor.UserId);
     }
 }

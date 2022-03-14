@@ -1,8 +1,8 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.IntegrationEvents;
-using MediatR;
+﻿using CompanyName.MyMeetings.Modules.Meetings.IntegrationEvents;
+
 using DomainPack.DomainEvents.EventBus;
+
+using MediatR;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupProposals
 {

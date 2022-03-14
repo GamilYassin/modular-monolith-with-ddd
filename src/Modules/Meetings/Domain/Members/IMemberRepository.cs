@@ -6,6 +6,6 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members
     {
         Task AddAsync(Member member);
 
-        Task<Member> GetByIdAsync(MemberId memberId);
+        Task<Member> GetByIdAsync(Guid memberId);
     }
 }

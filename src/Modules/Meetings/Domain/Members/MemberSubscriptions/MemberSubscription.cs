@@ -1,29 +1,24 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions.Events;
+
+using DomainPack.Contracts.EntitiesContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions
 {
-    public class MemberSubscription : EntityObjectBase, IAggregateRoot
+    public class MemberSubscription : EntityObjectBase<Guid>, IAggregateRoot
     {
-        public MemberSubscriptionId Id { get; private set; }
+              private DateTime _expirationDate;
 
-        private DateTime _expirationDate;
-
-        private MemberSubscription()
+        private MemberSubscription(Guid memberId, DateTime expirationDate)
+            : base(memberId)
         {
-            // Only for EF.
-        }
-
-        private MemberSubscription(MemberId memberId, DateTime expirationDate)
-        {
-            this.Id = new MemberSubscriptionId(memberId.Value);
             _expirationDate = expirationDate;
 
             this.AddDomainEvent(new MemberSubscriptionExpirationDateChangedDomainEvent(memberId, _expirationDate));
         }
 
-        public static MemberSubscription CreateForMember(MemberId memberId, DateTime expirationDate)
+        public static MemberSubscription CreateForMember(Guid memberId, DateTime expirationDate)
         {
             return new MemberSubscription(memberId, expirationDate);
         }
@@ -33,8 +28,13 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscript
             _expirationDate = expirationDate;
 
             this.AddDomainEvent(new MemberSubscriptionExpirationDateChangedDomainEvent(
-                new MemberId(this.Id.Value),
+                this.Id,
                 _expirationDate));
+        }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
         }
     }
 }

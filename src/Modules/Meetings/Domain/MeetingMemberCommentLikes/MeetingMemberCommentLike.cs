@@ -1,27 +1,22 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Comments;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
+using DomainPack.Contracts.EntitiesContracts;
+
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes
 {
-    public class MeetingMemberCommentLike : EntityObjectBase, IAggregateRoot
+    public class MeetingMemberCommentLike : EntityObjectBase<Guid>, IAggregateRoot
     {
-        public MeetingMemberCommentLikeId Id { get; }
 
-        private MeetingCommentId _meetingCommentId;
+        private Guid _meetingCommentId;
 
-        private MemberId _memberId;
+        private Guid _memberId;
 
-        private MeetingMemberCommentLike()
+        private MeetingMemberCommentLike(Guid meetingCommentId, Guid memberId) : base(Guid.NewGuid())
         {
-            // Only for EF.
-        }
-
-        private MeetingMemberCommentLike(MeetingCommentId meetingCommentId, MemberId memberId)
-        {
-            Id = new MeetingMemberCommentLikeId(Guid.NewGuid());
             _meetingCommentId = meetingCommentId;
             _memberId = memberId;
 
@@ -33,7 +28,12 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLik
             this.AddDomainEvent(new MeetingCommentUnlikedDomainEvent(_meetingCommentId, _memberId));
         }
 
-        public static MeetingMemberCommentLike Create(MeetingCommentId meetingCommentId, MemberId memberId)
+        public static MeetingMemberCommentLike Create(Guid meetingCommentId, Guid memberId)
             => new MeetingMemberCommentLike(meetingCommentId, memberId);
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
 using CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.PricingStrategies;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments.Rules;
@@ -7,7 +7,7 @@ using CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
 {
-    public class PriceList : ValueObject
+    public class PriceList : ValueObjectBase
     {
         private readonly List<PriceListItemData> _items;
 

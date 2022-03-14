@@ -1,9 +1,9 @@
 using System.Reflection.Metadata;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals
 {
-    public class MeetingGroupProposalStatus : ValueObject
+    public class MeetingGroupProposalStatus : ValueObjectBase
     {
         public string Value { get; }
 

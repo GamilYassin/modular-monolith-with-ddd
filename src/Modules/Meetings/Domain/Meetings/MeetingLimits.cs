@@ -1,8 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules;
 
-using DomainPack.Entities;
 
-using System.Collections.Generic;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
@@ -20,18 +18,14 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         public static MeetingLimits Create(int? attendeesLimit, int guestsLimit)
         {
-            CheckRule(new MeetingAttendeesLimitCannotBeNegativeRule(attendeesLimit));
+            var meetingLimits = new MeetingLimits(attendeesLimit, guestsLimit);
+            meetingLimits.CheckRule(new MeetingAttendeesLimitCannotBeNegativeRule(attendeesLimit));
 
-            CheckRule(new MeetingGuestsLimitCannotBeNegativeRule(guestsLimit));
+            meetingLimits.CheckRule(new MeetingGuestsLimitCannotBeNegativeRule(guestsLimit));
 
-            CheckRule(new MeetingAttendeesLimitMustBeGreaterThanGuestsLimitRule(attendeesLimit, guestsLimit));
+            meetingLimits.CheckRule(new MeetingAttendeesLimitMustBeGreaterThanGuestsLimitRule(attendeesLimit, guestsLimit));
 
-            return new MeetingLimits(attendeesLimit, guestsLimit);
-        }
-
-        protected override IEnumerable<object> GetAtomicValues()
-        {
-            throw new System.NotImplementedException();
+            return meetingLimits;
         }
     }
 }

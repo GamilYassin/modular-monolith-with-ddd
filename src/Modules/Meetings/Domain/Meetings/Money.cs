@@ -1,8 +1,8 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
-    public class Money : ValueObject
+    public class Money : ValueObjectBase
     {
         public static Money Undefined => new Money(null, null);
 

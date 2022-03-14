@@ -1,6 +1,5 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
+
 using Newtonsoft.Json;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscriptions.ChangeSubscriptionExpirationDateForMember
@@ -10,7 +9,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscription
         [JsonConstructor]
         public ChangeSubscriptionExpirationDateForMemberCommand(
             Guid id,
-            MemberId memberId,
+            Guid memberId,
             DateTime expirationDate)
             : base(id)
         {
@@ -18,7 +17,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscription
             ExpirationDate = expirationDate;
         }
 
-        public MemberId MemberId { get; }
+        public Guid MemberId { get; }
 
         public DateTime ExpirationDate { get; }
     }

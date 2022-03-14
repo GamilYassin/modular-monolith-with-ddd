@@ -37,15 +37,16 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
             Guid meetingId,
             Guid authorId,
             string comment,
-            Guid? inReplyToCommentId,
+            Guid inReplyToCommentId,
             MeetingCommentingConfiguration meetingCommentingConfiguration,
             MeetingGroup meetingGroup)
+            : base(Guid.NewGuid())
         {
             this.CheckRule(new CommentTextMustBeProvidedRule(comment));
             this.CheckRule(new CommentCanBeCreatedOnlyIfCommentingForMeetingEnabledRule(meetingCommentingConfiguration));
             this.CheckRule(new CommentCanBeAddedOnlyByMeetingGroupMemberRule(authorId, meetingGroup));
 
-            this.Id = Guid.NewGuid();
+            
             _meetingId = meetingId;
             _authorId = authorId;
             _comment = comment;
@@ -123,7 +124,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
                 meetingId,
                 authorId,
                 comment,
-                inReplyToCommentId: null,
+                inReplyToCommentId: Guid.Empty,
                 meetingCommentingConfiguration,
                 meetingGroup);
 
