@@ -8,7 +8,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
         public PriceListItemData(
             string countryCode,
             SubscriptionPeriod subscriptionPeriod,
-            MoneyValue value,
+            Money value,
             PriceListItemCategory category)
         {
             CountryCode = countryCode;
@@ -21,7 +21,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
 
         public SubscriptionPeriod SubscriptionPeriod { get; }
 
-        public MoneyValue Value { get; }
+        public Money Value { get; }
 
         public PriceListItemCategory Category { get; }
     }

@@ -19,14 +19,14 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPaym
 
         private SubscriptionRenewalPaymentStatus _subscriptionRenewalPaymentStatus;
 
-        private MoneyValue _value;
+        private Money _value;
 
         public static SubscriptionRenewalPayment Buy(
             PayerId payerId,
             SubscriptionId subscriptionId,
             SubscriptionPeriod period,
             string countryCode,
-            MoneyValue priceOffer,
+            Money priceOffer,
             PriceList priceList)
         {
             var priceInPriceList = priceList.GetPrice(countryCode, period, PriceListItemCategory.Renewal);
@@ -80,7 +80,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPaym
             _subscriptionPeriod = SubscriptionPeriod.Of(@event.SubscriptionPeriodCode);
             _countryCode = @event.CountryCode;
             _subscriptionRenewalPaymentStatus = SubscriptionRenewalPaymentStatus.Of(@event.Status);
-            _value = MoneyValue.Of(@event.Value, @event.Currency);
+            _value = Money.Of(@event.Value, @event.Currency);
         }
 
         private void When(SubscriptionRenewalPaymentPaidDomainEvent @event)

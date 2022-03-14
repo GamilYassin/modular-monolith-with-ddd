@@ -17,13 +17,13 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments
 
         private SubscriptionPaymentStatus _subscriptionPaymentStatus;
 
-        private MoneyValue _value;
+        private Money _value;
 
         public static SubscriptionPayment Buy(
             PayerId payerId,
             SubscriptionPeriod period,
             string countryCode,
-            MoneyValue priceOffer,
+            Money priceOffer,
             PriceList priceList)
         {
             var priceInPriceList = priceList.GetPrice(countryCode, period, PriceListItemCategory.New);
@@ -90,7 +90,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionPayments
             _subscriptionPeriod = SubscriptionPeriod.Of(@event.SubscriptionPeriodCode);
             _countryCode = @event.CountryCode;
             _subscriptionPaymentStatus = SubscriptionPaymentStatus.Of(@event.Status);
-            _value = MoneyValue.Of(@event.Value, @event.Currency);
+            _value = Money.Of(@event.Value, @event.Currency);
         }
 
         private void When(SubscriptionPaymentExpiredDomainEvent @event)

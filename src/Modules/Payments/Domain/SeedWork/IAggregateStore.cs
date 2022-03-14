@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using DomainPack.Contracts.EntitiesContracts;
+using DomainPack.Contracts.EventsContracts;
+
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork
@@ -7,13 +10,13 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork
     {
         Task Save();
 
-        Task<T> Load<T>(AggregateId<T> aggregateId)
-            where T : AggregateRoot;
+        Task<T> Load<T>(Guid aggregateId)
+            where T : IAggregateRoot;
 
         List<IDomainEvent> GetChanges();
 
         void AppendChanges<T>(T aggregate)
-            where T : AggregateRoot;
+            where T : IAggregateRoot;
 
         void ClearChanges();
     }

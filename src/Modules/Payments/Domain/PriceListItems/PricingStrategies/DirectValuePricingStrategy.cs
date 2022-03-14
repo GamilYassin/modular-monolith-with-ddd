@@ -5,14 +5,14 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.PricingS
 {
     public class DirectValuePricingStrategy : IPricingStrategy
     {
-        private readonly MoneyValue _directValue;
+        private readonly Money _directValue;
 
-        public DirectValuePricingStrategy(MoneyValue directValue)
+        public DirectValuePricingStrategy(Money directValue)
         {
             _directValue = directValue;
         }
 
-        public MoneyValue GetPrice(string countryCode, SubscriptionPeriod subscriptionPeriod, PriceListItemCategory category)
+        public Money GetPrice(string countryCode, SubscriptionPeriod subscriptionPeriod, PriceListItemCategory category)
         {
             return _directValue;
         }

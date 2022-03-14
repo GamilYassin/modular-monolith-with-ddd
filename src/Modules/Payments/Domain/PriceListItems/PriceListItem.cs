@@ -12,7 +12,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
 
         private PriceListItemCategory _category;
 
-        private MoneyValue _price;
+        private Money _price;
 
         private bool _isActive;
 
@@ -24,7 +24,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
             string countryCode,
             SubscriptionPeriod subscriptionPeriod,
             PriceListItemCategory category,
-            MoneyValue price)
+            Money price)
         {
             var priceListItem = new PriceListItem();
 
@@ -69,7 +69,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
             string countryCode,
             SubscriptionPeriod subscriptionPeriod,
             PriceListItemCategory category,
-            MoneyValue price)
+            Money price)
         {
             var priceListItemChangedDomainEvent = new PriceListItemAttributesChangedDomainEvent(this.Id, countryCode, subscriptionPeriod.Code, category.Code, price.Value, price.Currency);
 
@@ -90,7 +90,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
             _countryCode = @event.CountryCode;
             _subscriptionPeriod = SubscriptionPeriod.Of(@event.SubscriptionPeriodCode);
             _category = PriceListItemCategory.Of(@event.CategoryCode);
-            _price = MoneyValue.Of(@event.Price, @event.Currency);
+            _price = Money.Of(@event.Price, @event.Currency);
             _isActive = true;
         }
 
@@ -104,7 +104,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems
             this._countryCode = @event.CountryCode;
             this._subscriptionPeriod = SubscriptionPeriod.Of(@event.SubscriptionPeriodCode);
             this._category = PriceListItemCategory.Of(@event.CategoryCode);
-            this._price = MoneyValue.Of(@event.Price, @event.Currency);
+            this._price = Money.Of(@event.Price, @event.Currency);
         }
     }
 }

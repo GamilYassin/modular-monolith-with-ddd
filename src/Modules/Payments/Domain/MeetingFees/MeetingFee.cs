@@ -10,7 +10,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFees
 
         private MeetingId _meetingId;
 
-        private MoneyValue _fee;
+        private Money _fee;
 
         private MeetingFeeStatus _status;
 
@@ -26,7 +26,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFees
         public static MeetingFee Create(
             PayerId payerId,
             MeetingId meetingId,
-            MoneyValue fee)
+            Money fee)
         {
             var meetingFee = new MeetingFee();
 
@@ -65,7 +65,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFees
             this.Id = meetingFeeCreated.MeetingFeeId;
             _payerId = new PayerId(meetingFeeCreated.PayerId);
             _meetingId = new MeetingId(meetingFeeCreated.MeetingId);
-            _fee = MoneyValue.Of(meetingFeeCreated.FeeValue, meetingFeeCreated.FeeCurrency);
+            _fee = Money.Of(meetingFeeCreated.FeeValue, meetingFeeCreated.FeeCurrency);
             _status = MeetingFeeStatus.Of(meetingFeeCreated.Status);
         }
 

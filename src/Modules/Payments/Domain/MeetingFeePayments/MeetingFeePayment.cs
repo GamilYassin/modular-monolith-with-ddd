@@ -2,9 +2,11 @@
 using CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFees;
 using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 
+using DomainPack.Contracts.EventsContracts;
+
 namespace CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments
 {
-    public class MeetingFeePayment : AggregateRoot
+    public class MeetingFeePayment :  AggregateRoot
     {
         private MeetingFeeId _meetingFeeId;
 
@@ -73,6 +75,11 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.MeetingFeePayments
         private void When(MeetingFeePaymentPaidDomainEvent @event)
         {
             _status = MeetingFeePaymentStatus.Of(@event.Status);
+        }
+
+        protected override void Apply(IDomainEvent @event)
+        {
+            throw new NotImplementedException();
         }
     }
 }

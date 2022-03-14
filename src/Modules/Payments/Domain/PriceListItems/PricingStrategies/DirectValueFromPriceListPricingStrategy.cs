@@ -15,7 +15,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.PricingS
             _items = items;
         }
 
-        public MoneyValue GetPrice(
+        public Money GetPrice(
             string countryCode,
             SubscriptionPeriod subscriptionPeriod,
             PriceListItemCategory category)

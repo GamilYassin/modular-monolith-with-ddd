@@ -2,11 +2,11 @@
 {
     public class MoneyMustHaveTheSameCurrencyRule : IBusinessRule
     {
-        private readonly MoneyValue _left;
+        private readonly Money _left;
 
-        private readonly MoneyValue _right;
+        private readonly Money _right;
 
-        public MoneyMustHaveTheSameCurrencyRule(MoneyValue left, MoneyValue right)
+        public MoneyMustHaveTheSameCurrencyRule(Money left, Money right)
         {
             _left = left;
             _right = right;

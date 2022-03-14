@@ -5,7 +5,7 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.PricingS
 {
     public interface IPricingStrategy
     {
-        MoneyValue GetPrice(
+        Money GetPrice(
             string countryCode,
             SubscriptionPeriod subscriptionPeriod,
             PriceListItemCategory category);

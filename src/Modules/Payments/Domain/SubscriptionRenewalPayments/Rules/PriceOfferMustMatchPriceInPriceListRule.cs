@@ -4,13 +4,13 @@ namespace CompanyName.MyMeetings.Modules.Payments.Domain.SubscriptionRenewalPaym
 {
     public class PriceOfferMustMatchPriceInPriceListRule : IBusinessRule
     {
-        private readonly MoneyValue _priceOffer;
+        private readonly Money _priceOffer;
 
-        private readonly MoneyValue _priceInPriceList;
+        private readonly Money _priceInPriceList;
 
         public PriceOfferMustMatchPriceInPriceListRule(
-            MoneyValue priceOffer,
-            MoneyValue priceInPriceList)
+            Money priceOffer,
+            Money priceInPriceList)
         {
             _priceOffer = priceOffer;
             _priceInPriceList = priceInPriceList;
