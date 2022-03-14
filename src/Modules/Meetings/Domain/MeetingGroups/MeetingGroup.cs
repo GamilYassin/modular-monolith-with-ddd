@@ -1,21 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Rules;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
+
+using DomainPack.Contracts.EntitiesContracts;
+using DomainPack.Entities;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
 {
-    public class MeetingGroup : EntityObjectBase, IAggregateRoot
+    public class MeetingGroup : EntityObjectBase<Guid>, IAggregateRoot
     {
-        public MeetingGroupId Id { get; private set; }
 
         private string _name;
 
@@ -23,7 +22,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
 
         private MeetingGroupLocation _location;
 
-        private MemberId _creatorId;
+        private Guid _creatorId;
 
         private List<MeetingGroupMember> _members;
 
@@ -32,23 +31,18 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
         private DateTime? _paymentDateTo;
 
         internal static MeetingGroup CreateBasedOnProposal(
-            MeetingGroupProposalId meetingGroupProposalId,
+            Guid meetingGroupProposalId,
             string name,
             string description,
             MeetingGroupLocation location,
-            MemberId creatorId)
+            Guid creatorId)
         {
             return new MeetingGroup(meetingGroupProposalId, name, description, location, creatorId);
         }
 
-        private MeetingGroup()
-        {
-            // Only for EF.
-        }
 
-        private MeetingGroup(MeetingGroupProposalId meetingGroupProposalId, string name, string description, MeetingGroupLocation location, MemberId creatorId)
+        private MeetingGroup(Guid meetingGroupProposalId, string name, string description, MeetingGroupLocation location, Guid creatorId): base(meetingGroupProposalId)
         {
-            this.Id = new MeetingGroupId(meetingGroupProposalId.Value);
             this._name = name;
             this._description = description;
             this._creatorId = creatorId;
@@ -57,8 +51,10 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
 
             this.AddDomainEvent(new MeetingGroupCreatedDomainEvent(this.Id, creatorId));
 
-            this._members = new List<MeetingGroupMember>();
-            this._members.Add(MeetingGroupMember.CreateNew(this.Id, this._creatorId, MeetingGroupMemberRole.Organizer));
+            this._members = new List<MeetingGroupMember>
+            {
+                MeetingGroupMember.CreateNew(this.Id, this._creatorId, MeetingGroupMemberRole.Organizer)
+            };
         }
 
         public void EditGeneralAttributes(string name, string description, MeetingGroupLocation location)
@@ -70,18 +66,18 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
             this.AddDomainEvent(new MeetingGroupGeneralAttributesEditedDomainEvent(this._name, this._description, this._location));
         }
 
-        public void JoinToGroupMember(MemberId memberId)
+        public void JoinToGroupMember(Guid memberId)
         {
             this.CheckRule(new MeetingGroupMemberCannotBeAddedTwiceRule(_members, memberId));
 
             this._members.Add(MeetingGroupMember.CreateNew(this.Id, memberId, MeetingGroupMemberRole.Member));
         }
 
-        public void LeaveGroup(MemberId memberId)
+        public void LeaveGroup(Guid memberId)
         {
             this.CheckRule(new NotActualGroupMemberCannotLeaveGroupRule(_members, memberId));
 
-            var member = this._members.Single(x => x.IsMember(memberId));
+            MeetingGroupMember member = this._members.Single(x => x.IsMember(memberId));
 
             member.Leave();
         }
@@ -102,8 +98,8 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
             int guestsLimit,
             Term rsvpTerm,
             Money eventFee,
-            List<MemberId> hostsMembersIds,
-            MemberId creatorId)
+            List<Guid> hostsMembersIds,
+            Guid creatorId)
         {
             this.CheckRule(new MeetingCanBeOrganizedOnlyByPayedGroupRule(_paymentDateTo));
 
@@ -122,14 +118,19 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
                 creatorId);
         }
 
-        internal bool IsMemberOfGroup(MemberId attendeeId)
+        internal bool IsMemberOfGroup(Guid attendeeId)
         {
             return _members.Any(x => x.IsMember(attendeeId));
         }
 
-        internal bool IsOrganizer(MemberId memberId)
+        internal bool IsOrganizer(Guid memberId)
         {
             return _members.Any(x => x.IsOrganizer(memberId));
+        }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
         }
     }
 }

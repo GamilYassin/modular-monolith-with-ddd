@@ -1,19 +1,19 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.DomainEvents;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events
 {
     public class MeetingAttendeeFeePaidDomainEvent : DomainEventBase
     {
-        public MeetingAttendeeFeePaidDomainEvent(MeetingId meetingId, MemberId attendeeId)
+        public MeetingAttendeeFeePaidDomainEvent(Guid meetingId, Guid attendeeId)
         {
             MeetingId = meetingId;
             AttendeeId = attendeeId;
         }
 
-        public MeetingId MeetingId { get; }
+        public Guid MeetingId { get; }
 
-        public MemberId AttendeeId { get; }
+        public Guid AttendeeId { get; }
     }
 }

@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.Contracts.ValidationContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
 {
@@ -9,9 +10,9 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
     {
         private readonly List<MeetingAttendee> _attendees;
 
-        private readonly MemberId _newOrganizerId;
+        private readonly Guid _newOrganizerId;
 
-        internal OnlyMeetingAttendeeCanHaveChangedRoleRule(List<MeetingAttendee> attendees, MemberId newOrganizerId)
+        internal OnlyMeetingAttendeeCanHaveChangedRoleRule(List<MeetingAttendee> attendees, Guid newOrganizerId)
         {
             _attendees = attendees;
             _newOrganizerId = newOrganizerId;

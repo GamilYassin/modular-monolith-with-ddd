@@ -1,4 +1,5 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
+using DomainPack.DomainEvents;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events
 {

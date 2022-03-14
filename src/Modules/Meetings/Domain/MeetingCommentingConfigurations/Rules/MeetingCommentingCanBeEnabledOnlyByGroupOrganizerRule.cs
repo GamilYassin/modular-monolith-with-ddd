@@ -1,15 +1,18 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.Contracts.ValidationContracts;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations.Rules
 {
     public class MeetingCommentingCanBeEnabledOnlyByGroupOrganizerRule : IBusinessRule
     {
         private readonly MeetingGroup _meetingGroup;
-        private readonly MemberId _enablingMemberId;
+        private readonly Guid _enablingMemberId;
 
-        public MeetingCommentingCanBeEnabledOnlyByGroupOrganizerRule(MemberId enablingMemberId, MeetingGroup meetingGroup)
+        public MeetingCommentingCanBeEnabledOnlyByGroupOrganizerRule(Guid enablingMemberId, MeetingGroup meetingGroup)
         {
             _meetingGroup = meetingGroup;
             _enablingMemberId = enablingMemberId;

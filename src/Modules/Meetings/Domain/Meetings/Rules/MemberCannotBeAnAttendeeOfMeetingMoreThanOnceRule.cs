@@ -1,17 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.Contracts.ValidationContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
 {
     public class MemberCannotBeAnAttendeeOfMeetingMoreThanOnceRule : IBusinessRule
     {
-        private readonly MemberId _attendeeId;
+        private readonly Guid _attendeeId;
 
         private readonly List<MeetingAttendee> _attendees;
 
-        public MemberCannotBeAnAttendeeOfMeetingMoreThanOnceRule(MemberId attendeeId, List<MeetingAttendee> attendees)
+        public MemberCannotBeAnAttendeeOfMeetingMoreThanOnceRule(Guid attendeeId, List<MeetingAttendee> attendees)
         {
             this._attendeeId = attendeeId;
             _attendees = attendees;

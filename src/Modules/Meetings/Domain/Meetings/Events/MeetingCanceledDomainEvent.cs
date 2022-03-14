@@ -1,21 +1,21 @@
-﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+﻿using DomainPack.DomainEvents;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events
 {
     public class MeetingCanceledDomainEvent : DomainEventBase
     {
-        public MeetingCanceledDomainEvent(MeetingId meetingId, MemberId cancelMemberId, DateTime cancelDate)
+        public MeetingCanceledDomainEvent(Guid meetingId, Guid cancelMemberId, DateTime cancelDate)
         {
             MeetingId = meetingId;
             CancelMemberId = cancelMemberId;
             CancelDate = cancelDate;
         }
 
-        public MeetingId MeetingId { get; }
+        public Guid MeetingId { get; }
 
-        public MemberId CancelMemberId { get; }
+        public Guid CancelMemberId { get; }
 
         public DateTime CancelDate { get; }
     }

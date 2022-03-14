@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using DomainPack.Contracts.ValidationContracts;
+
+using System;
+using System.Collections.Generic;
 using System.Linq;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Rules
 {
@@ -9,16 +10,19 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Rules
     {
         private readonly List<MeetingGroupMember> _members;
 
-        private readonly MemberId memberId;
+        private readonly Guid memberId;
 
-        public NotActualGroupMemberCannotLeaveGroupRule(List<MeetingGroupMember> members, MemberId memberId)
+        public NotActualGroupMemberCannotLeaveGroupRule(List<MeetingGroupMember> members, Guid memberId)
             : base()
         {
             _members = members;
             this.memberId = memberId;
         }
 
-        public bool IsBroken() => this._members.SingleOrDefault(x => x.IsMember(memberId)) == null;
+        public bool IsBroken()
+        {
+            return this._members.SingleOrDefault(x => x.IsMember(memberId)) == null;
+        }
 
         public string Message => "Member is not member of this group so he cannot leave it";
     }

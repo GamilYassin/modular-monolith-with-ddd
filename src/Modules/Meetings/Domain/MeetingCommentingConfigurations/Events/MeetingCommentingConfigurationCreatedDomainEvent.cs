@@ -1,15 +1,17 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
+﻿
+using DomainPack.DomainEvents;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations.Events
 {
     public class MeetingCommentingConfigurationCreatedDomainEvent : DomainEventBase
     {
-        public MeetingId MeetingId { get; }
+        public Guid MeetingId { get; }
 
         public bool IsEnabled { get; }
 
-        public MeetingCommentingConfigurationCreatedDomainEvent(MeetingId meetingId, bool isEnabled)
+        public MeetingCommentingConfigurationCreatedDomainEvent(Guid meetingId, bool isEnabled)
         {
             MeetingId = meetingId;
             IsEnabled = isEnabled;

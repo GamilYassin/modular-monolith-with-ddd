@@ -1,17 +1,18 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+
+using DomainPack.DomainEvents;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events
 {
     public class MeetingGroupPaymentInfoUpdatedDomainEvent : DomainEventBase
     {
-        public MeetingGroupPaymentInfoUpdatedDomainEvent(MeetingGroupId meetingGroupId, DateTime paymentDateTo)
+        public MeetingGroupPaymentInfoUpdatedDomainEvent(Guid meetingGroupId, DateTime paymentDateTo)
         {
             MeetingGroupId = meetingGroupId;
             PaymentDateTo = paymentDateTo;
         }
 
-        public MeetingGroupId MeetingGroupId { get; }
+        public Guid MeetingGroupId { get; }
 
         public DateTime PaymentDateTo { get; }
     }

@@ -1,12 +1,13 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
 using CompanyName.MyMeetings.Modules.Administration.Domain.Members.Events;
+
+using DomainPack.Contracts.EntitiesContracts;
+using DomainPack.Entities;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.Members
 {
-    public class Member : EntityObjectBase, IAggregateRoot
+    public class Member : EntityObjectBase<Guid>, IAggregateRoot
     {
-        public MemberId Id { get; private set; }
 
         private string _login;
 
@@ -20,14 +21,9 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.Members
 
         private DateTime _createDate;
 
-        private Member()
-        {
-            // Only for EF.
-        }
 
-        private Member(Guid id, string login, string email, string firstName, string lastName, string name)
+        private Member(Guid id, string login, string email, string firstName, string lastName, string name): base(id)
         {
-            this.Id = new MemberId(id);
             _login = login;
             _email = email;
             _firstName = firstName;
@@ -41,6 +37,11 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.Members
         public static Member Create(Guid id, string login, string email, string firstName, string lastName, string name)
         {
             return new Member(id, login, email, firstName, lastName, name);
+        }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
         }
     }
 }

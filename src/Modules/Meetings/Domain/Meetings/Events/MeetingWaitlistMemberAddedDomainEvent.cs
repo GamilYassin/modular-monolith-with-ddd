@@ -1,18 +1,20 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+﻿
+using DomainPack.DomainEvents;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events
 {
     public class MeetingWaitlistMemberAddedDomainEvent : DomainEventBase
     {
-        public MeetingWaitlistMemberAddedDomainEvent(MeetingId meetingId, MemberId memberId)
+        public MeetingWaitlistMemberAddedDomainEvent(Guid meetingId, Guid memberId)
         {
             MeetingId = meetingId;
             MemberId = memberId;
         }
 
-        public MeetingId MeetingId { get; }
+        public Guid MeetingId { get; }
 
-        public MemberId MemberId { get; }
+        public Guid MemberId { get; }
     }
 }

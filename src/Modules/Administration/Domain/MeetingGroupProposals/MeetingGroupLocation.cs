@@ -1,8 +1,11 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
+using DomainPack.Entities;
+
+using System.Collections.Generic;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals
 {
-    public class MeetingGroupLocation : ValueObject
+    public class MeetingGroupLocation : ValueObjectBase
     {
         private MeetingGroupLocation(string city, string countryCode)
         {
@@ -18,5 +21,6 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
         {
             return new MeetingGroupLocation(city, countryCode);
         }
+
     }
 }

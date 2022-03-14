@@ -53,7 +53,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
         {
         }
 
-        public void Accept(UserId userId)
+        public void Accept(Guid userId)
         {
             this.CheckRule(new MeetingGroupProposalCanBeVerifiedOnceRule(_decision));
 
@@ -64,7 +64,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
             this.AddDomainEvent(new MeetingGroupProposalAcceptedDomainEvent(this.Id));
         }
 
-        public void Reject(UserId userId, string rejectReason)
+        public void Reject(Guid userId, string rejectReason)
         {
             this.CheckRule(new MeetingGroupProposalCanBeVerifiedOnceRule(_decision));
             this.CheckRule(new MeetingGroupProposalRejectionMustHaveAReasonRule(rejectReason));

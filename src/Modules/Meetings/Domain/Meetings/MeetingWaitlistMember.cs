@@ -1,16 +1,17 @@
-﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
+
+using DomainPack.Entities;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
-    public class MeetingWaitlistMember : EntityObjectBase
+    public class MeetingWaitlistMember : EntityObjectBase<Guid>
     {
-        internal MemberId MemberId { get; private set; }
+        internal Guid MemberId { get; private set; }
 
-        internal MeetingId MeetingId { get; private set; }
+        internal Guid MeetingId { get; private set; }
 
         internal DateTime SignUpDate { get; private set; }
 
@@ -22,11 +23,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         private DateTime? _movedToAttendeesDate;
 
-        private MeetingWaitlistMember()
-        {
-        }
-
-        private MeetingWaitlistMember(MeetingId meetingId, MemberId memberId)
+        private MeetingWaitlistMember(Guid meetingId, Guid memberId)
         {
             this.MemberId = memberId;
             this.MeetingId = meetingId;
@@ -36,7 +33,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             this.AddDomainEvent(new MeetingWaitlistMemberAddedDomainEvent(this.MeetingId, this.MemberId));
         }
 
-        internal static MeetingWaitlistMember CreateNew(MeetingId meetingId, MemberId memberId)
+        internal static MeetingWaitlistMember CreateNew(Guid meetingId, Guid memberId)
         {
             return new MeetingWaitlistMember(meetingId, memberId);
         }
@@ -47,7 +44,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             _movedToAttendeesDate = SystemClock.Now;
         }
 
-        internal bool IsActiveOnWaitList(MemberId memberId)
+        internal bool IsActiveOnWaitList(Guid memberId)
         {
             return this.MemberId == memberId && this.IsActive();
         }

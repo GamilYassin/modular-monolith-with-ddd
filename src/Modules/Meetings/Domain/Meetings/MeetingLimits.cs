@@ -1,9 +1,12 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules;
+
+using DomainPack.Entities;
+
+using System.Collections.Generic;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
-    public class MeetingLimits : ValueObject
+    public class MeetingLimits : ValueObjectBase
     {
         public int? AttendeesLimit { get; }
 
@@ -24,6 +27,11 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             CheckRule(new MeetingAttendeesLimitMustBeGreaterThanGuestsLimitRule(attendeesLimit, guestsLimit));
 
             return new MeetingLimits(attendeesLimit, guestsLimit);
+        }
+
+        protected override IEnumerable<object> GetAtomicValues()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

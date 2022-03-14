@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations
 {
@@ -7,6 +7,6 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfig
     {
         Task AddAsync(MeetingCommentingConfiguration meetingCommentingConfiguration);
 
-        Task<MeetingCommentingConfiguration> GetByMeetingIdAsync(MeetingId meetingId);
+        Task<MeetingCommentingConfiguration> GetByMeetingIdAsync(Guid meetingId);
     }
 }

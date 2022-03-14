@@ -1,3 +1,6 @@
+using DomainPack.Contracts.CQSContracts;
+using DomainPack.CQS.Quries;
+
 using NUnit.Framework;
 
 namespace CompanyName.MyMeetings.BuildingBlocks.Application.UnitTests.Queries

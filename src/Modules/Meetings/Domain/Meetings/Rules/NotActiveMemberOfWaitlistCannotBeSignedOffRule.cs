@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.Contracts.ValidationContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
 {
@@ -9,9 +10,9 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
     {
         private readonly List<MeetingWaitlistMember> _waitlistMembers;
 
-        private readonly MemberId _memberId;
+        private readonly Guid _memberId;
 
-        public NotActiveMemberOfWaitlistCannotBeSignedOffRule(List<MeetingWaitlistMember> waitlistMembers, MemberId memberId)
+        public NotActiveMemberOfWaitlistCannotBeSignedOffRule(List<MeetingWaitlistMember> waitlistMembers, Guid memberId)
         {
             _waitlistMembers = waitlistMembers;
             _memberId = memberId;

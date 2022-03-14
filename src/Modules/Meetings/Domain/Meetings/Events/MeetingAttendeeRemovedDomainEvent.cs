@@ -1,21 +1,21 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.DomainEvents;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events
 {
     public class MeetingAttendeeRemovedDomainEvent : DomainEventBase
     {
-        public MeetingAttendeeRemovedDomainEvent(MemberId memberId, MeetingId meetingId, string reason)
+        public MeetingAttendeeRemovedDomainEvent(Guid memberId, Guid meetingId, string reason)
         {
             MemberId = memberId;
             MeetingId = meetingId;
             Reason = reason;
         }
 
-        public MemberId MemberId { get; }
+        public Guid MemberId { get; }
 
-        public MeetingId MeetingId { get; }
+        public Guid MeetingId { get; }
 
         public string Reason { get; }
     }

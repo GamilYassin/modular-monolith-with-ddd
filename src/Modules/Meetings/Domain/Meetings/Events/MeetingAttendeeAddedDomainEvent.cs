@@ -1,14 +1,14 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.DomainEvents;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events
 {
     public class MeetingAttendeeAddedDomainEvent : DomainEventBase
     {
         public MeetingAttendeeAddedDomainEvent(
-            MeetingId meetingId,
-            MemberId attendeeId,
+            Guid meetingId,
+            Guid attendeeId,
             DateTime rsvpDate,
             string role,
             int guestsNumber,
@@ -24,9 +24,9 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events
             FeeCurrency = feeCurrency;
         }
 
-        public MeetingId MeetingId { get; }
+        public Guid MeetingId { get; }
 
-        public MemberId AttendeeId { get; }
+        public Guid AttendeeId { get; }
 
         public DateTime RSVPDate { get; }
 

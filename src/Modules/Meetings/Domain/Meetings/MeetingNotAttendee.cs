@@ -1,17 +1,18 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
+using DomainPack.Entities;
+
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
-    public class MeetingNotAttendee : EntityObjectBase
+    public class MeetingNotAttendee : EntityObjectBase<Guid>
     {
-        internal MemberId MemberId { get; private set; }
+        internal Guid MemberId { get; private set; }
 
-        internal MeetingId MeetingId { get; private set; }
+        internal Guid MeetingId { get; private set; }
 
         private DateTime _decisionDate;
 
@@ -19,11 +20,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         private DateTime? _decisionChangeDate;
 
-        private MeetingNotAttendee()
-        {
-        }
-
-        private MeetingNotAttendee(MeetingId meetingId, MemberId memberId)
+        private MeetingNotAttendee(Guid meetingId, Guid memberId): base(default)
         {
             this.MemberId = memberId;
             this.MeetingId = meetingId;
@@ -32,12 +29,12 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             this.AddDomainEvent(new MeetingNotAttendeeAddedDomainEvent(this.MeetingId, this.MemberId));
         }
 
-        internal static MeetingNotAttendee CreateNew(MeetingId meetingId, MemberId memberId)
+        internal static MeetingNotAttendee CreateNew(Guid meetingId, Guid memberId)
         {
             return new MeetingNotAttendee(meetingId, memberId);
         }
 
-        internal bool IsActiveNotAttendee(MemberId memberId)
+        internal bool IsActiveNotAttendee(Guid memberId)
         {
             return !this._decisionChanged && this.MemberId == memberId;
         }
@@ -48,6 +45,11 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             _decisionChangeDate = SystemClock.Now;
 
             this.AddDomainEvent(new MeetingNotAttendeeChangedDecisionDomainEvent(this.MemberId, this.MeetingId));
+        }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
         }
     }
 }

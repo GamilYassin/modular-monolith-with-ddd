@@ -13,4 +13,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Contracts\DomainPack.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Entities\DomainPack.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

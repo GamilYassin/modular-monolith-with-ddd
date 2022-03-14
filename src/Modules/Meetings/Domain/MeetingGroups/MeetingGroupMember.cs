@@ -1,16 +1,17 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
+using DomainPack.Entities;
+
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
 {
-    public class MeetingGroupMember : EntityObjectBase
+    public class MeetingGroupMember : EntityObjectBase<Guid>
     {
-        internal MeetingGroupId MeetingGroupId { get; private set; }
+        internal Guid MeetingGroupId { get; private set; }
 
-        internal MemberId MemberId { get; private set; }
+        internal Guid MemberId { get; private set; }
 
         private MeetingGroupMemberRole _role;
 
@@ -20,15 +21,12 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
 
         private DateTime? _leaveDate;
 
-        private MeetingGroupMember()
-        {
-            // Only for EF.
-        }
 
         private MeetingGroupMember(
-            MeetingGroupId meetingGroupId,
-            MemberId memberId,
+            Guid meetingGroupId,
+            Guid memberId,
             MeetingGroupMemberRole role)
+            : base(meetingGroupId)
         {
             this.MeetingGroupId = meetingGroupId;
             this.MemberId = memberId;
@@ -40,8 +38,8 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
         }
 
         internal static MeetingGroupMember CreateNew(
-            MeetingGroupId meetingGroupId,
-            MemberId memberId,
+            Guid meetingGroupId,
+            Guid memberId,
             MeetingGroupMemberRole role)
         {
             return new MeetingGroupMember(meetingGroupId, memberId, role);
@@ -55,14 +53,19 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups
             this.AddDomainEvent(new MeetingGroupMemberLeftGroupDomainEvent(this.MeetingGroupId, this.MemberId));
         }
 
-        internal bool IsMember(MemberId memberId)
+        internal bool IsMember(Guid memberId)
         {
             return this._isActive && this.MemberId == memberId;
         }
 
-        internal bool IsOrganizer(MemberId memberId)
+        internal bool IsOrganizer(Guid memberId)
         {
             return this.IsMember(memberId) && _role == MeetingGroupMemberRole.Organizer;
+        }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
         }
     }
 }

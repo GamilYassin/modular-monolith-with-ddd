@@ -1,14 +1,17 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
+using DomainPack.DomainEvents;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events
 {
     public class MeetingMainAttributesChangedDomainEvent : DomainEventBase
     {
-        public MeetingMainAttributesChangedDomainEvent(MeetingId meetingId)
+        public MeetingMainAttributesChangedDomainEvent(Guid meetingId)
         {
             MeetingId = meetingId;
         }
 
-        public MeetingId MeetingId { get; }
+        public Guid MeetingId { get; }
     }
 }

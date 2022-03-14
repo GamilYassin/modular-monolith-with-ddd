@@ -1,18 +1,19 @@
 ﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
+using DomainPack.Entities;
+
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 {
-    public class MeetingAttendee : EntityObjectBase
+    public class MeetingAttendee : EntityObjectBase<Guid>
     {
-        internal MemberId AttendeeId { get; private set; }
+        internal Guid AttendeeId { get; private set; }
 
-        internal MeetingId MeetingId { get; private set; }
+        internal Guid MeetingId { get; private set; }
 
         private DateTime _decisionDate;
 
@@ -26,7 +27,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         private DateTime? _removedDate;
 
-        private MemberId _removingMemberId;
+        private Guid _removingMemberId;
 
         private string _removingReason;
 
@@ -36,13 +37,9 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
 
         private bool _isFeePaid;
 
-        private MeetingAttendee()
-        {
-        }
-
-        internal static MeetingAttendee CreateNew(
-            MeetingId meetingId,
-            MemberId attendeeId,
+         internal static MeetingAttendee CreateNew(
+            Guid meetingId,
+            Guid attendeeId,
             DateTime decisionDate,
             MeetingAttendeeRole role,
             int guestsNumber,
@@ -52,12 +49,13 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
         }
 
         private MeetingAttendee(
-            MeetingId meetingId,
-            MemberId attendeeId,
+            Guid meetingId,
+            Guid attendeeId,
             DateTime decisionDate,
             MeetingAttendeeRole role,
             int guestsNumber,
             Money eventFee)
+            : base(default)
         {
             this.AttendeeId = attendeeId;
             this.MeetingId = meetingId;
@@ -94,7 +92,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             this.AddDomainEvent(new MeetingAttendeeChangedDecisionDomainEvent(this.AttendeeId, this.MeetingId));
         }
 
-        internal bool IsActiveAttendee(MemberId attendeeId)
+        internal bool IsActiveAttendee(Guid attendeeId)
         {
             return this.AttendeeId == attendeeId && !_decisionChanged;
         }
@@ -129,7 +127,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             this.AddDomainEvent(new MemberSetAsAttendeeDomainEvent(this.MeetingId, this.AttendeeId));
         }
 
-        internal void Remove(MemberId removingMemberId, string reason)
+        internal void Remove(Guid removingMemberId, string reason)
         {
             this.CheckRule(new ReasonOfRemovingAttendeeFromMeetingMustBeProvidedRule(reason));
 
@@ -146,6 +144,11 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings
             _isFeePaid = true;
 
             this.AddDomainEvent(new MeetingAttendeeFeePaidDomainEvent(this.MeetingId, this.AttendeeId));
+        }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,8 +1,9 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿
+using DomainPack.Entities;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals
 {
-    public class MeetingGroupProposalStatus : ValueObject
+    public class MeetingGroupProposalStatus : ValueObjectBase
     {
         private MeetingGroupProposalStatus(string value)
         {

@@ -1,4 +1,4 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿using DomainPack.Contracts.ValidationContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
 {

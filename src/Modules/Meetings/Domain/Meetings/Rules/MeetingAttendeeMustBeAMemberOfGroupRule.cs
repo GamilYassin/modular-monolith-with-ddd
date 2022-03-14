@@ -1,6 +1,8 @@
-﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
+
+using DomainPack.Contracts.ValidationContracts;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
 {
@@ -8,9 +10,9 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
     {
         private readonly MeetingGroup _meetingGroup;
 
-        private readonly MemberId _attendeeId;
+        private readonly Guid _attendeeId;
 
-        internal MeetingAttendeeMustBeAMemberOfGroupRule(MemberId attendeeId, MeetingGroup meetingGroup)
+        internal MeetingAttendeeMustBeAMemberOfGroupRule(Guid attendeeId, MeetingGroup meetingGroup)
         {
             _attendeeId = attendeeId;
             _meetingGroup = meetingGroup;

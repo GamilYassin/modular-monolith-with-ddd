@@ -12,4 +12,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Messaging\DomainPack.Messaging.csproj" />
+  </ItemGroup>
+
 </Project>

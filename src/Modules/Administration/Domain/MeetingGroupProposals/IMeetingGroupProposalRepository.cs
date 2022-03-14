@@ -7,6 +7,6 @@ namespace CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupPropo
     {
         Task AddAsync(MeetingGroupProposal meetingGroupProposal);
 
-        Task<MeetingGroupProposal> GetByIdAsync(MeetingGroupProposalId meetingGroupProposalId);
+        Task<MeetingGroupProposal> GetByIdAsync(Guid meetingGroupProposalId);
     }
 }

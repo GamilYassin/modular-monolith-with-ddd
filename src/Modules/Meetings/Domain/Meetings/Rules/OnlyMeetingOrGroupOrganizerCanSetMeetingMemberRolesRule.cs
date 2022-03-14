@@ -1,18 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.Contracts.ValidationContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
 {
     public class OnlyMeetingOrGroupOrganizerCanSetMeetingMemberRolesRule : IBusinessRule
     {
-        private readonly MemberId _settingMemberId;
+        private readonly Guid _settingMemberId;
         private readonly MeetingGroup _meetingGroup;
         private readonly List<MeetingAttendee> _attendees;
 
-        public OnlyMeetingOrGroupOrganizerCanSetMeetingMemberRolesRule(MemberId settingMemberId, MeetingGroup meetingGroup, List<MeetingAttendee> attendees)
+        public OnlyMeetingOrGroupOrganizerCanSetMeetingMemberRolesRule(Guid settingMemberId, MeetingGroup meetingGroup, List<MeetingAttendee> attendees)
         {
             _settingMemberId = settingMemberId;
             _meetingGroup = meetingGroup;

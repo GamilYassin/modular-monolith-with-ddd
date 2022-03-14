@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿using System;
+using System.Collections.Generic;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.Contracts.ValidationContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
 {
@@ -9,11 +10,11 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Rules
     {
         private readonly MeetingGroup _meetingGroup;
 
-        private readonly MemberId _memberId;
+        private readonly Guid _memberId;
 
         private readonly List<MeetingAttendee> _attendees;
 
-        internal MemberOnWaitlistMustBeAMemberOfGroupRule(MeetingGroup meetingGroup, MemberId memberId, List<MeetingAttendee> attendees)
+        internal MemberOnWaitlistMustBeAMemberOfGroupRule(MeetingGroup meetingGroup, Guid memberId, List<MeetingAttendee> attendees)
             : base()
         {
             _meetingGroup = meetingGroup;

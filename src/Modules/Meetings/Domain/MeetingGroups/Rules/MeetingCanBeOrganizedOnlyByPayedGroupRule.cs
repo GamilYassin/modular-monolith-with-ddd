@@ -1,6 +1,8 @@
-﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
+
+using DomainPack.Contracts.ValidationContracts;
+
+using System;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Rules
 {
@@ -13,7 +15,10 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Rules
             _paymentDateTo = paymentDateTo;
         }
 
-        public bool IsBroken() => !_paymentDateTo.HasValue || _paymentDateTo < SystemClock.Now;
+        public bool IsBroken()
+        {
+            return !_paymentDateTo.HasValue || _paymentDateTo < SystemClock.Now;
+        }
 
         public string Message => "Meeting can be organized only by payed group";
     }

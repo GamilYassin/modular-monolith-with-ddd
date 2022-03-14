@@ -1,21 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+
+using DomainPack.Contracts.ValidationContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups.Rules
 {
     public class MeetingHostMustBeAMeetingGroupMemberRule : IBusinessRule
     {
-        private readonly MemberId _creatorId;
+        private readonly Guid _creatorId;
 
-        private readonly List<MemberId> _hostsMembersIds;
+        private readonly List<Guid> _hostsMembersIds;
 
         private readonly List<MeetingGroupMember> _members;
 
         public MeetingHostMustBeAMeetingGroupMemberRule(
-            MemberId creatorId,
-            List<MemberId> hostsMembersIds,
+            Guid creatorId,
+            List<Guid> hostsMembersIds,
             List<MeetingGroupMember> members)
         {
             _creatorId = creatorId;

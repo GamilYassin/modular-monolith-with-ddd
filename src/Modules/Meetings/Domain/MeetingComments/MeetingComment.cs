@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Comments;
+
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Comments.Events;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments.Rules;
@@ -11,17 +9,19 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.SharedKernel;
 
+using DomainPack.Contracts.EntitiesContracts;
+using DomainPack.Entities;
+
 namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
 {
-    public class MeetingComment : EntityObjectBase, IAggregateRoot
+    public class MeetingComment : EntityObjectBase<Guid>, IAggregateRoot
     {
-        public MeetingCommentId Id { get; }
 
-        private MeetingId _meetingId;
+        private Guid _meetingId;
 
-        private MemberId _authorId;
+        private Guid _authorId;
 
-        private MeetingCommentId? _inReplyToCommentId;
+        private Guid? _inReplyToCommentId;
 
         private string _comment;
 
@@ -34,10 +34,10 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
         private string _removedByReason;
 
         private MeetingComment(
-            MeetingId meetingId,
-            MemberId authorId,
+            Guid meetingId,
+            Guid authorId,
             string comment,
-            MeetingCommentId? inReplyToCommentId,
+            Guid? inReplyToCommentId,
             MeetingCommentingConfiguration meetingCommentingConfiguration,
             MeetingGroup meetingGroup)
         {
@@ -45,7 +45,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
             this.CheckRule(new CommentCanBeCreatedOnlyIfCommentingForMeetingEnabledRule(meetingCommentingConfiguration));
             this.CheckRule(new CommentCanBeAddedOnlyByMeetingGroupMemberRule(authorId, meetingGroup));
 
-            this.Id = new MeetingCommentId(Guid.NewGuid());
+            this.Id = Guid.NewGuid();
             _meetingId = meetingId;
             _authorId = authorId;
             _comment = comment;
@@ -68,12 +68,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
             }
         }
 
-        private MeetingComment()
-        {
-            // Only for EF.
-        }
-
-        public void Edit(MemberId editorId, string editedComment, MeetingCommentingConfiguration meetingCommentingConfiguration)
+        public void Edit(Guid editorId, string editedComment, MeetingCommentingConfiguration meetingCommentingConfiguration)
         {
             this.CheckRule(new CommentTextMustBeProvidedRule(editedComment));
             this.CheckRule(new MeetingCommentCanBeEditedOnlyByAuthorRule(this._authorId, editorId));
@@ -85,7 +80,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
             this.AddDomainEvent(new MeetingCommentEditedDomainEvent(this.Id, editedComment));
         }
 
-        public void Remove(MemberId removingMemberId, MeetingGroup meetingGroup, string reason = null)
+        public void Remove(Guid removingMemberId, MeetingGroup meetingGroup, string reason = null)
         {
             this.CheckRule(new MeetingCommentCanBeRemovedOnlyByAuthorOrGroupOrganizerRule(meetingGroup, this._authorId, removingMemberId));
             this.CheckRule(new RemovingReasonCanBeProvidedOnlyByGroupOrganizerRule(meetingGroup, removingMemberId, reason));
@@ -96,7 +91,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
             this.AddDomainEvent(new MeetingCommentRemovedDomainEvent(this.Id));
         }
 
-        public MeetingComment Reply(MemberId replierId, string reply, MeetingGroup meetingGroup, MeetingCommentingConfiguration meetingCommentingConfiguration)
+        public MeetingComment Reply(Guid replierId, string reply, MeetingGroup meetingGroup, MeetingCommentingConfiguration meetingCommentingConfiguration)
             => new MeetingComment(
                 _meetingId,
                 replierId,
@@ -106,7 +101,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
                 meetingGroup);
 
         public MeetingMemberCommentLike Like(
-            MemberId likerId,
+            Guid likerId,
             MeetingGroupMemberData likerMeetingGroupMember,
             int meetingMemberCommentLikesCount)
         {
@@ -116,11 +111,11 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
             return MeetingMemberCommentLike.Create(this.Id, likerId);
         }
 
-        public MeetingId GetMeetingId() => this._meetingId;
+        public Guid GetMeetingId() => this._meetingId;
 
         internal static MeetingComment Create(
-            MeetingId meetingId,
-            MemberId authorId,
+            Guid meetingId,
+            Guid authorId,
             string comment,
             MeetingGroup meetingGroup,
             MeetingCommentingConfiguration meetingCommentingConfiguration)
@@ -131,5 +126,10 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments
                 inReplyToCommentId: null,
                 meetingCommentingConfiguration,
                 meetingGroup);
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
