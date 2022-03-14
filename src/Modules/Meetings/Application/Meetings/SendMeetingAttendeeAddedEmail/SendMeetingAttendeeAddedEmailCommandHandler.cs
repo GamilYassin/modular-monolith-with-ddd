@@ -1,7 +1,7 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Application.Members;
 
-using MediatR;
+using DomainPack.Contracts.ServicesContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.SendMeetingAttendeeAddedEmail
 {

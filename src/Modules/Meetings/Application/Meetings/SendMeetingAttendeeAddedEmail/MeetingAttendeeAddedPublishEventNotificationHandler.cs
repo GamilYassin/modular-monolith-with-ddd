@@ -2,7 +2,7 @@
 
 using DomainPack.DomainEvents.EventBus;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.SendMeetingAttendeeAddedEmail
 {
@@ -19,9 +19,9 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.SendMeeti
         {
             _eventsBus.Publish(new MeetingAttendeeAddedIntegrationEvent(
                 Guid.NewGuid(),
-                notification.DomainEvent.OccurredOn,
-                notification.DomainEvent.MeetingId.Value,
-                notification.DomainEvent.AttendeeId.Value,
+                notification.DomainEvent.CreatedOn,
+                notification.DomainEvent.MeetingId,
+                notification.DomainEvent.AttendeeId,
                 notification.DomainEvent.FeeValue,
                 notification.DomainEvent.FeeCurrency));
 

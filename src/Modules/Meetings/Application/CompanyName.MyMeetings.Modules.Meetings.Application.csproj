@@ -15,6 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.CQS\DomainPack.CQS.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.EmailService\DomainPack.EmailService.csproj" />
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Validator\DomainPack.Validator.csproj" />
     <ProjectReference Include="..\..\Administration\IntegrationEvents\CompanyName.MyMeetings.Modules.Administration.IntegrationEvents.csproj" PrivateAssets="All" />
     <ProjectReference Include="..\IntegrationEvents\CompanyName.MyMeetings.Modules.Meetings.IntegrationEvents.csproj" PrivateAssets="All" />
     <ProjectReference Include="..\..\Payments\IntegrationEvents\CompanyName.MyMeetings.Modules.Payments.IntegrationEvents.csproj" PrivateAssets="All" />

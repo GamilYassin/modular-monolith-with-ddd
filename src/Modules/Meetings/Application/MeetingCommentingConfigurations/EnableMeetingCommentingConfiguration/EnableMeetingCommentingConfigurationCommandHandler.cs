@@ -4,7 +4,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.EnableMeetingCommentingConfiguration
 {
@@ -29,13 +29,13 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingC
 
         public async Task<Unit> Handle(EnableMeetingCommentingConfigurationCommand command, CancellationToken cancellationToken)
         {
-            var meetingCommentingConfiguration = await _meetingCommentingConfigurationRepository.GetByMeetingIdAsync(new MeetingId(command.MeetingId));
+            var meetingCommentingConfiguration = await _meetingCommentingConfigurationRepository.GetByMeetingIdAsync(command.MeetingId);
             if (meetingCommentingConfiguration == null)
             {
                 throw new InvalidCommandException(new List<string> { "Meeting commenting configuration for enabling commenting must exist." });
             }
 
-            var meeting = await _meetingRepository.GetByIdAsync(new MeetingId(command.MeetingId));
+            var meeting = await _meetingRepository.GetByIdAsync(command.MeetingId);
 
             var meetingGroup = await _meetingGroupRepository.GetByIdAsync(meeting.GetMeetingGroupId());
 

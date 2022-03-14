@@ -3,7 +3,10 @@ using Autofac;
 using CompanyName.MyMeetings.Modules.Administration.Application.Contracts;
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration;
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Processing;
-using MediatR;
+
+using DomainPack.Contracts.MediatorContracts;
+
+
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure
 {

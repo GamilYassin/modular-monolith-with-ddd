@@ -2,7 +2,7 @@
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.GetAllMeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Application.Members;
 
-using MediatR;
+using DomainPack.Contracts.ServicesContracts;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.SendMeetingGroupCreatedEmail
 {
@@ -31,7 +31,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.Send
                                   "FROM [meetings].[v_MeetingGroups] AS [MeetingGroup] " +
                                   "WHERE [MeetingGroup].[Id] = @Id", new
                                   {
-                                      Id = request.MeetingGroupId.Value
+                                      Id = request.MeetingGroupId
                                   });
 
             var member = await MembersQueryHelper.GetMember(request.CreatorId, connection);

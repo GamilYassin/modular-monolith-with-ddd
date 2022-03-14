@@ -1,7 +1,7 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.SetMeetingGroupExpirationDate
 {
@@ -16,7 +16,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.SetM
 
         public async Task<Unit> Handle(SetMeetingGroupExpirationDateCommand request, CancellationToken cancellationToken)
         {
-            var meetingGroup = await _meetingGroupRepository.GetByIdAsync(new MeetingGroupId(request.MeetingGroupId));
+            var meetingGroup = await _meetingGroupRepository.GetByIdAsync(request.MeetingGroupId);
 
             meetingGroup.SetExpirationDate(request.DateTo);
 

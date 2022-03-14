@@ -28,7 +28,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroupPropos
 
             await _meetingGroupProposalRepository.AddAsync(meetingGroupProposal);
 
-            return meetingGroupProposal.Id.Value;
+            return meetingGroupProposal.Id;
         }
     }
 }

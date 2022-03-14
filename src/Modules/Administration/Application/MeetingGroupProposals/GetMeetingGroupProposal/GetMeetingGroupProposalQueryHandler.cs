@@ -1,7 +1,5 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
+
 using Dapper;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.GetMeetingGroupProposal
@@ -17,7 +15,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroup
 
         public async Task<MeetingGroupProposalDto> Handle(GetMeetingGroupProposalQuery query, CancellationToken cancellationToken)
         {
-            var connection = _sqlConnectionFactory.GetOpenConnection();
+            object connection = _sqlConnectionFactory.GetOpenConnection();
 
             string sql = "SELECT " +
                          $"[MeetingGroupProposal].[Id] AS [{nameof(MeetingGroupProposalDto.Id)}], " +
@@ -35,7 +33,9 @@ namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroup
                          "FROM [administration].[v_MeetingGroupProposals] AS [MeetingGroupProposal] " +
                          "WHERE [MeetingGroupProposal].[Id] = @MeetingGroupProposalId";
 
-            return await connection.QuerySingleAsync<MeetingGroupProposalDto>(sql, new { query.MeetingGroupProposalId });
+            //return await connection.QuerySingleAsync<MeetingGroupProposalDto>(sql, new { query.MeetingGroupProposalId });
+
+            throw new NotImplementedException();
         }
     }
 }

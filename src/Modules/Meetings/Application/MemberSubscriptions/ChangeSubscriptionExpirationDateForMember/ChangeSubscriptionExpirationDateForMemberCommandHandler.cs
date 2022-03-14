@@ -1,7 +1,7 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members.MemberSubscriptions;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscriptions.ChangeSubscriptionExpirationDateForMember
 {
@@ -16,7 +16,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscription
 
         public async Task<Unit> Handle(ChangeSubscriptionExpirationDateForMemberCommand command, CancellationToken cancellationToken)
         {
-            MemberSubscription memberSubscription = await _memberSubscriptionRepository.GetByIdOptionalAsync(new MemberSubscriptionId(command.MemberId.Value));
+            MemberSubscription memberSubscription = await _memberSubscriptionRepository.GetByIdOptionalAsync(command.MemberId);
 
             if (memberSubscription == null)
             {

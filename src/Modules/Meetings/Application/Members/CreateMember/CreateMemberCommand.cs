@@ -1,12 +1,12 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 
-using Newtonsoft.Json;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members.CreateMember
 {
     public class CreateMemberCommand : InternalCommandBase
     {
-        [JsonConstructor]
+        
         public CreateMemberCommand(
             Guid id,
             Guid memberId,

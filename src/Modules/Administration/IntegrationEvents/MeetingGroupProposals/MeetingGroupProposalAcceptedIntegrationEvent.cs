@@ -1,5 +1,6 @@
-﻿using System;
-using DomainPack.Messaging.EventBus;
+﻿
+
+using DomainPack.DomainEvents.EventBus;
 
 namespace CompanyName.MyMeetings.Modules.Administration.IntegrationEvents.MeetingGroupProposals
 {

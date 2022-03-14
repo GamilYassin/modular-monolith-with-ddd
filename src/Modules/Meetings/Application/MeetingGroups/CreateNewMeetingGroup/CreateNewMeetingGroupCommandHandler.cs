@@ -2,7 +2,7 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.CreateNewMeetingGroup
 {

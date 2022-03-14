@@ -1,6 +1,6 @@
 ﻿using System;
 using Quartz.Logging;
-using Serilog;
+
 using Serilog.Context;
 using Serilog.Sinks.File;
 

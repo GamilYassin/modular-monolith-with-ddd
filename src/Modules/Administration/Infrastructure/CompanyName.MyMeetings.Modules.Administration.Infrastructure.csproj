@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0-windows</TargetFramework>
     <Configurations>Debug;Release;Production</Configurations>
+	  <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.CQS\DomainPack.CQS.csproj" />
     <ProjectReference Include="..\..\Meetings\IntegrationEvents\CompanyName.MyMeetings.Modules.Meetings.IntegrationEvents.csproj" />
     <ProjectReference Include="..\..\UserAccess\IntegrationEvents\CompanyName.MyMeetings.Modules.UserAccess.IntegrationEvents.csproj" />
     <ProjectReference Include="..\Application\CompanyName.MyMeetings.Modules.Administration.Application.csproj" />

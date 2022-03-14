@@ -3,7 +3,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.SetMeetingAttendeeRole
 {
@@ -25,11 +25,11 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.SetMeetin
 
         public async Task<Unit> Handle(SetMeetingAttendeeRoleCommand request, CancellationToken cancellationToken)
         {
-            var meeting = await _meetingRepository.GetByIdAsync(new MeetingId(request.MeetingId));
+            var meeting = await _meetingRepository.GetByIdAsync(request.MeetingId);
 
             var meetingGroup = await _meetingGroupRepository.GetByIdAsync(meeting.GetMeetingGroupId());
 
-            meeting.SetAttendeeRole(meetingGroup, _memberContext.MemberId, new MemberId(request.MemberId));
+            meeting.SetAttendeeRole(meetingGroup, _memberContext.MemberId, request.MemberId);
 
             return Unit.Value;
         }

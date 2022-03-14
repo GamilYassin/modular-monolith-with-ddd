@@ -2,10 +2,12 @@
 using Autofac.Core;
 using Autofac.Features.Variance;
 
+using DomainPack.Contracts.MediatorContracts;
+using DomainPack.Mediator;
+using DomainPack.Mediator.Pipeline;
+
 using FluentValidation;
 
-using MediatR;
-using MediatR.Pipeline;
 
 using System;
 using System.Collections.Generic;

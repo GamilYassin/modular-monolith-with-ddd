@@ -23,25 +23,27 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.GetA
         {
             var connection = _sqlConnectionFactory.GetOpenConnection();
 
-            var sql = "SELECT " +
-                      $"[MemberMeetingGroup].[Id] AS [{nameof(MemberMeetingGroupDto.Id)}], " +
-                      $"[MemberMeetingGroup].[Name] AS [{nameof(MemberMeetingGroupDto.Name)}], " +
-                      $"[MemberMeetingGroup].[Description] AS [{nameof(MemberMeetingGroupDto.Description)}], " +
-                      $"[MemberMeetingGroup].[LocationCountryCode] AS [{nameof(MemberMeetingGroupDto.LocationCountryCode)}], " +
-                      $"[MemberMeetingGroup].[LocationCity] AS [{nameof(MemberMeetingGroupDto.LocationCity)}], " +
-                      $"[MemberMeetingGroup].[MemberId] AS [{nameof(MemberMeetingGroupDto.MemberId)}], " +
-                      $"[MemberMeetingGroup].[RoleCode] AS [{nameof(MemberMeetingGroupDto.RoleCode)}] " +
-                      "FROM [meetings].[v_MemberMeetingGroups] AS [MemberMeetingGroup] " +
-                      "WHERE [MemberMeetingGroup].MemberId = @MemberId AND [MemberMeetingGroup].[IsActive] = 1";
+            //var sql = "SELECT " +
+            //          $"[MemberMeetingGroup].[Id] AS [{nameof(MemberMeetingGroupDto.Id)}], " +
+            //          $"[MemberMeetingGroup].[Name] AS [{nameof(MemberMeetingGroupDto.Name)}], " +
+            //          $"[MemberMeetingGroup].[Description] AS [{nameof(MemberMeetingGroupDto.Description)}], " +
+            //          $"[MemberMeetingGroup].[LocationCountryCode] AS [{nameof(MemberMeetingGroupDto.LocationCountryCode)}], " +
+            //          $"[MemberMeetingGroup].[LocationCity] AS [{nameof(MemberMeetingGroupDto.LocationCity)}], " +
+            //          $"[MemberMeetingGroup].[MemberId] AS [{nameof(MemberMeetingGroupDto.MemberId)}], " +
+            //          $"[MemberMeetingGroup].[RoleCode] AS [{nameof(MemberMeetingGroupDto.RoleCode)}] " +
+            //          "FROM [meetings].[v_MemberMeetingGroups] AS [MemberMeetingGroup] " +
+            //          "WHERE [MemberMeetingGroup].MemberId = @MemberId AND [MemberMeetingGroup].[IsActive] = 1";
 
-            var meetingGroups = await connection.QueryAsync<MemberMeetingGroupDto>(
-                sql,
-                new
-                {
-                    MemberId = _executionContextAccessor.UserId
-                });
+            //var meetingGroups = await connection.QueryAsync<MemberMeetingGroupDto>(
+            //    sql,
+            //    new
+            //    {
+            //        MemberId = _executionContextAccessor.UserId
+            //    });
 
-            return meetingGroups.AsList();
+            //return meetingGroups.AsList();
+
+            throw new NotImplementedException();
         }
     }
 }

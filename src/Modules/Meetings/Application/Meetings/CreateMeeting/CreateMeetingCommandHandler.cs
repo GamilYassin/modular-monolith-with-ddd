@@ -23,11 +23,11 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.CreateMee
 
         public async Task<Guid> Handle(CreateMeetingCommand request, CancellationToken cancellationToken)
         {
-            var meetingGroup = await _meetingGroupRepository.GetByIdAsync(new MeetingGroupId(request.MeetingGroupId));
+            MeetingGroup meetingGroup = await _meetingGroupRepository.GetByIdAsync(request.MeetingGroupId);
 
-            var hostsMembersIds = request.HostMemberIds.Select(x => new MemberId(x)).ToList();
+            List<Guid> hostsMembersIds = request.HostMemberIds.Select(x => x).ToList();
 
-            var meeting = meetingGroup.CreateMeeting(
+            Meeting meeting = meetingGroup.CreateMeeting(
                 request.Title,
                 MeetingTerm.CreateNewBetweenDates(request.TermStartDate, request.TermStartDate),
                 request.Description,
@@ -41,7 +41,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.CreateMee
 
             await _meetingRepository.AddAsync(meeting);
 
-            return meeting.Id.Value;
+            return meeting.Id;
         }
     }
 }

@@ -1,7 +1,5 @@
 ﻿using Autofac;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Domain;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Logging;
@@ -29,7 +27,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configura
             builder
                 .Register(c =>
                 {
-                    var dbContextOptionsBuilder = new DbContextOptionsBuilder<AdministrationContext>();
+                    DbContextOptionsBuilder<AdministrationContext> dbContextOptionsBuilder = new DbContextOptionsBuilder<AdministrationContext>();
                     dbContextOptionsBuilder.UseSqlServer(_databaseConnectionString);
 
                     dbContextOptionsBuilder
@@ -41,7 +39,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configura
                 .As<DbContext>()
                 .InstancePerLifetimeScope();
 
-            var infrastructureAssembly = typeof(AdministrationContext).Assembly;
+            System.Reflection.Assembly infrastructureAssembly = typeof(AdministrationContext).Assembly;
 
             builder.RegisterAssemblyTypes(infrastructureAssembly)
                 .Where(type => type.Name.EndsWith("Repository"))

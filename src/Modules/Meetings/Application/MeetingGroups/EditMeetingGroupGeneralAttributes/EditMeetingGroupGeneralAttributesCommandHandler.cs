@@ -2,7 +2,7 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.EditMeetingGroupGeneralAttributes
 {
@@ -20,7 +20,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.Edit
         public async Task<Unit> Handle(EditMeetingGroupGeneralAttributesCommand request, CancellationToken cancellationToken)
         {
             MeetingGroup meetingGroup =
-                await _meetingGroupRepository.GetByIdAsync(new MeetingGroupId(request.MeetingGroupId));
+                await _meetingGroupRepository.GetByIdAsync(request.MeetingGroupId);
 
             meetingGroup.EditGeneralAttributes(request.Name, request.Description, MeetingGroupLocation.CreateNew(request.LocationCity, request.LocationCountry));
 

@@ -2,7 +2,7 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.LeaveMeetingGroup
 {
@@ -21,7 +21,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.Leav
 
         public async Task<Unit> Handle(LeaveMeetingGroupCommand request, CancellationToken cancellationToken)
         {
-            var meetingGroup = await _meetingGroupRepository.GetByIdAsync(new MeetingGroupId(request.MeetingGroupId));
+            var meetingGroup = await _meetingGroupRepository.GetByIdAsync(request.MeetingGroupId);
 
             meetingGroup.LeaveGroup(_memberContext.MemberId);
 

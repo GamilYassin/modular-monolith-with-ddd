@@ -2,7 +2,7 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.ChangeNotAttendeeDecision
 {
@@ -19,7 +19,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.ChangeNot
 
         public async Task<Unit> Handle(ChangeNotAttendeeDecisionCommand request, CancellationToken cancellationToken)
         {
-            var meeting = await _meetingRepository.GetByIdAsync(new MeetingId(request.MeetingId));
+            var meeting = await _meetingRepository.GetByIdAsync(request.MeetingId);
 
             meeting.ChangeNotAttendeeDecision(_memberContext.MemberId);
 

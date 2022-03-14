@@ -1,17 +1,14 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 
-using Newtonsoft.Json;
-
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.SendMeetingGroupCreatedEmail
 {
     internal class SendMeetingGroupCreatedEmailCommand : InternalCommandBase
     {
-        internal MeetingGroupId MeetingGroupId { get; }
+        internal Guid MeetingGroupId { get; }
 
-        internal MemberId CreatorId { get; }
+        internal Guid CreatorId { get; }
 
-        [JsonConstructor]
-        internal SendMeetingGroupCreatedEmailCommand(Guid id, MeetingGroupId meetingGroupId, MemberId creatorId)
+        internal SendMeetingGroupCreatedEmailCommand(Guid id, Guid meetingGroupId, Guid creatorId)
             : base(id)
         {
             MeetingGroupId = meetingGroupId;

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using CompanyName.MyMeetings.Modules.Administration.Application.Configuration;
 using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Administration.Domain.Members;
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Administration.Application.Members
 {
@@ -29,7 +29,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Application.Members
 
             await _memberRepository.AddAsync(member);
 
-            return member.Id.Value;
+            return member.Id;
         }
     }
 }

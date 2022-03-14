@@ -1,9 +1,8 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Administration.Domain.Users;
-using MediatR;
+
+using DomainPack.Contracts.MediatorContracts;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.AcceptMeetingGroupProposal
 {
@@ -20,7 +19,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroup
 
         public async Task<Unit> Handle(AcceptMeetingGroupProposalCommand request, CancellationToken cancellationToken)
         {
-            var meetingGroupProposal = await _meetingGroupProposalRepository.GetByIdAsync(new MeetingGroupProposalId(request.MeetingGroupProposalId));
+            MeetingGroupProposal meetingGroupProposal = await _meetingGroupProposalRepository.GetByIdAsync(request.MeetingGroupProposalId);
 
             meetingGroupProposal.Accept(_userContext.UserId);
 

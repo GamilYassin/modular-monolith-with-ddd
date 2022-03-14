@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0-windows</TargetFramework>
     <Configurations>Debug;Release;Production</Configurations>
+	  <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.DomainEvents\DomainPack.DomainEvents.csproj" />
     <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Messaging\DomainPack.Messaging.csproj" />
   </ItemGroup>
 

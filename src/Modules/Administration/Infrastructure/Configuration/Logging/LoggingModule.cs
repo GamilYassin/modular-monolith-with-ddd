@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using Serilog;
+
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Logging
 {

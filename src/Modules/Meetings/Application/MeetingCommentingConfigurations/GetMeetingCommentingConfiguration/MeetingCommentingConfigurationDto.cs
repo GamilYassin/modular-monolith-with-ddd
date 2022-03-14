@@ -1,4 +1,4 @@
-﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.GetMeetingCommentingConfiguration
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfigurations.GetMeetingCommentingConfiguration
 {
     public class MeetingCommentingConfigurationDto
     {

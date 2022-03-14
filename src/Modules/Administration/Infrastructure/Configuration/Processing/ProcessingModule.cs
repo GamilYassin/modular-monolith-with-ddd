@@ -6,7 +6,7 @@ using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.DomainEventsDispatchi
 using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Processing.InternalCommands;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Processing
 {

@@ -5,7 +5,7 @@ using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration
 using Quartz;
 using Quartz.Impl;
 using Quartz.Logging;
-using Serilog;
+
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Quartz
 {

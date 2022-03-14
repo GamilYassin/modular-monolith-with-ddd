@@ -3,8 +3,9 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfigurations.GetMeetingCommentingConfiguration;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.RemoveMeetingComment
 {
@@ -25,7 +26,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.Re
 
         public async Task<Unit> Handle(RemoveMeetingCommentCommand command, CancellationToken cancellationToken)
         {
-            var meetingComment = await _meetingCommentRepository.GetByIdAsync(new MeetingCommentId(command.MeetingCommentId));
+            var meetingComment = await _meetingCommentRepository.GetByIdAsync(command.MeetingCommentId);
             if (meetingComment == null)
             {
                 throw new InvalidCommandException(new List<string> { "Meeting comment for removing must exist." });

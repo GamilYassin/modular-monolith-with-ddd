@@ -5,7 +5,7 @@ using CompanyName.MyMeetings.Modules.Administration.Application.Configuration;
 using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Administration.Domain.MeetingGroupProposals;
 using CompanyName.MyMeetings.Modules.Administration.Domain.Users;
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.RequestMeetingGroupProposalVerification
 {
@@ -26,12 +26,12 @@ namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroup
                 request.Name,
                 request.Description,
                 MeetingGroupLocation.Create(request.LocationCity, request.LocationCountryCode),
-                new UserId(request.ProposalUserId),
+                request.ProposalUserId,
                 request.ProposalDate);
 
             await _meetingGroupProposalRepository.AddAsync(meetingGroupProposal);
 
-            return meetingGroupProposal.Id.Value;
+            return meetingGroupProposal.Id;
         }
     }
 }

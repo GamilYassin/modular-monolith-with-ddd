@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0-windows</TargetFramework>
     <Configurations>Debug;Release;Production</Configurations>
+	  <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -26,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\DomainPack\DomainPack.Mediator\DomainPack.Mediator.csproj" />
     <ProjectReference Include="..\IntegrationEvents\CompanyName.MyMeetings.Modules.Administration.IntegrationEvents.csproj" PrivateAssets="All" />
 	<ProjectReference Include="..\Domain\CompanyName.MyMeetings.Modules.Administration.Domain.csproj" PrivateAssets="All" />
     <ProjectReference Include="..\..\Meetings\IntegrationEvents\CompanyName.MyMeetings.Modules.Meetings.IntegrationEvents.csproj" PrivateAssets="All" />

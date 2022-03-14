@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members.CreateMember
 {

@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿
+
+using DomainPack.Contracts.MediatorContracts;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Application.Contracts
 {

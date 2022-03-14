@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application.Data;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
 using CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.GetMeetingGroupProposal;
+
 using Dapper;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.GetMeetingGroupProposals
@@ -36,7 +33,9 @@ namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroup
                          $"[MeetingGroupProposal].[DecisionRejectReason] AS [{nameof(MeetingGroupProposalDto.DecisionRejectReason)}] " +
                          "FROM [administration].[v_MeetingGroupProposals] AS [MeetingGroupProposal] ";
 
-            return (await connection.QueryAsync<MeetingGroupProposalDto>(sql)).AsList();
+            //return (await connection.QueryAsync<MeetingGroupProposalDto>(sql)).AsList();
+
+            throw new NotImplementedException();
         }
     }
 }

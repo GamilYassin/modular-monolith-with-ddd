@@ -2,7 +2,7 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.ChangeMeetingMainAttributes
 {
@@ -19,7 +19,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.ChangeMee
 
         public async Task<Unit> Handle(ChangeMeetingMainAttributesCommand request, CancellationToken cancellationToken)
         {
-            var meeting = await _meetingRepository.GetByIdAsync(new MeetingId(request.MeetingId));
+            var meeting = await _meetingRepository.GetByIdAsync(request.MeetingId);
 
             meeting.ChangeMainAttributes(
                 request.Title,

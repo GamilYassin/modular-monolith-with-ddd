@@ -23,9 +23,9 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.Ge
                       "ON [Liker].[Id] = [Like].[MemberId]" +
                       "WHERE [Like].[MeetingCommentId] = @MeetingCommentId";
 
-            var meetingCommentLikers = await connection.QueryAsync<MeetingCommentLikerDto>(sql, new { query.MeetingCommentId });
+            var meetingCommentLikers = await connection.QueryAsync<MeetingCommentLikerDto>(sql, query.MeetingCommentId);
 
-            return meetingCommentLikers.AsList();
+            return meetingCommentLikers.ToList();
         }
     }
 }

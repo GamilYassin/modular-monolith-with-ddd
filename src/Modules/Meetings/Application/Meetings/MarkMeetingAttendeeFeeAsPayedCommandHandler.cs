@@ -1,7 +1,7 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings
 {
@@ -16,9 +16,9 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings
 
         public async Task<Unit> Handle(MarkMeetingAttendeeFeeAsPayedCommand command, CancellationToken cancellationToken)
         {
-            var meeting = await _meetingRepository.GetByIdAsync(new MeetingId(command.MeetingId));
+            var meeting = await _meetingRepository.GetByIdAsync(command.MeetingId);
 
-            meeting.MarkAttendeeFeeAsPayed(new MemberId(command.MemberId));
+            meeting.MarkAttendeeFeeAsPayed(command.MemberId);
 
             return Unit.Value;
         }

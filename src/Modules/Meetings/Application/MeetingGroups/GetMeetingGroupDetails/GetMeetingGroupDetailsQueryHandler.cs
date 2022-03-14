@@ -1,6 +1,6 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries;
 
-using System.Data;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.GetMeetingGroupDetails
 {
@@ -15,7 +15,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.GetM
 
         public async Task<MeetingGroupDetailsDto> Handle(GetMeetingGroupDetailsQuery query, CancellationToken cancellationToken)
         {
-            using var connection = _sqlConnectionFactory.GetOpenConnection();
+            var connection = _sqlConnectionFactory.GetOpenConnection();
 
             var meetingGroup = await connection.QuerySingleAsync<MeetingGroupDetailsDto>(
                 "SELECT " +

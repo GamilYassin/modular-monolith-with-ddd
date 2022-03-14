@@ -2,7 +2,7 @@
 using CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscriptions.ChangeSubscriptionExpirationDateForMember;
 using CompanyName.MyMeetings.Modules.Payments.IntegrationEvents;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscriptions
 {
@@ -19,7 +19,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MemberSubscription
         {
             await _commandsScheduler.EnqueueAsync(new ChangeSubscriptionExpirationDateForMemberCommand(
                 Guid.NewGuid(),
-                new MemberId(@event.PayerId),
+                @event.PayerId,
                 @event.ExpirationDate));
         }
     }

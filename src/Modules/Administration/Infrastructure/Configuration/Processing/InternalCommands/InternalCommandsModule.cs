@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Autofac;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure.InternalCommands;
+﻿using Autofac;
+
 using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Administration.Application.Members;
+
+using DomainPack.Contracts.CQSContracts;
+using DomainPack.CQS.InternalCommands;
+
 using Module = Autofac.Module;
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Processing.InternalCommands
@@ -27,12 +26,12 @@ namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configura
                 .WithParameter("internalCommandsMap", _internalCommandsMap)
                 .SingleInstance();
 
-            this.CheckMappings();
+            CheckMappings();
         }
 
         private void CheckMappings()
         {
-            var internalCommands = Assemblies.Application
+            List<Type> internalCommands = Assemblies.Application
                 .GetTypes()
                 .Where(x => x.BaseType != null &&
                             (
@@ -42,9 +41,9 @@ namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configura
                 .ToList();
 
             List<Type> notMappedInternalCommands = new List<Type>();
-            foreach (var internalCommand in internalCommands)
+            foreach (Type internalCommand in internalCommands)
             {
-                _internalCommandsMap.TryGetBySecond(internalCommand, out var name);
+                _internalCommandsMap.TryGetBySecond(internalCommand, out string name);
 
                 if (name == null)
                 {

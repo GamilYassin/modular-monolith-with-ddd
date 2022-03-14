@@ -1,4 +1,5 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
+using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfigurations.GetMeetingCommentingConfiguration;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
@@ -31,21 +32,21 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.Ad
 
         public async Task<Guid> Handle(AddMeetingCommentCommand command, CancellationToken cancellationToken)
         {
-            var meeting = await _meetingRepository.GetByIdAsync(new MeetingId(command.MeetingId));
+            Meeting meeting = await _meetingRepository.GetByIdAsync(command.MeetingId);
             if (meeting == null)
             {
                 throw new InvalidCommandException(new List<string> { "Meeting for adding comment must exist." });
             }
 
-            var meetingGroup = await _meetingGroupRepository.GetByIdAsync(meeting.GetMeetingGroupId());
+            MeetingGroup meetingGroup = await _meetingGroupRepository.GetByIdAsync(meeting.GetMeetingGroupId());
 
-            var meetingCommentingConfiguration = await _meetingCommentingConfigurationRepository.GetByMeetingIdAsync(new MeetingId(command.MeetingId));
+            Domain.MeetingCommentingConfigurations.MeetingCommentingConfiguration meetingCommentingConfiguration = await _meetingCommentingConfigurationRepository.GetByMeetingIdAsync(command.MeetingId);
 
-            var meetingComment = meeting.AddComment(_memberContext.MemberId, command.Comment, meetingGroup, meetingCommentingConfiguration);
+            MeetingComment meetingComment = meeting.AddComment(_memberContext.MemberId, command.Comment, meetingGroup, meetingCommentingConfiguration);
 
             await _meetingCommentRepository.AddAsync(meetingComment);
 
-            return meetingComment.Id.Value;
+            return meetingComment.Id;
         }
     }
 }

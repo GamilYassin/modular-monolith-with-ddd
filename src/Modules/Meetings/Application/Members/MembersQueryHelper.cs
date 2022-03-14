@@ -1,12 +1,11 @@
 ﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-using System.Data;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members
 {
     public class MembersQueryHelper
     {
-        public static async Task<MemberDto> GetMember(MemberId memberId, IDbConnection connection)
+        public static async Task<MemberDto> GetMember(Guid memberId, IDbConnection connection)
         {
             return await connection.QuerySingleAsync<MemberDto>(
                 "SELECT " +
@@ -17,11 +16,11 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members
                 "FROM [meetings].[v_Members] AS [Member] " +
                 "WHERE [Member].[Id] = @Id", new
                 {
-                    Id = memberId.Value
+                    Id = memberId
                 });
         }
 
-        public static async Task<MeetingGroupMemberData> GetMeetingGroupMember(MemberId memberId, MeetingId meetingOfGroupId, IDbConnection connection)
+        public static async Task<MeetingGroupMemberData> GetMeetingGroupMember(Guid memberId, Guid meetingOfGroupId, IDbConnection connection)
         {
             var result = await connection.QuerySingleAsync<MeetingGroupMemberResponse>(
                 "SELECT " +
@@ -32,13 +31,13 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members
                 "WHERE [MeetingGroupMember].[MemberId] = @MemberId AND [Meeting].[Id] = @MeetingId",
                 new
                 {
-                    MemberId = memberId.Value,
-                    MeetingId = meetingOfGroupId.Value
+                    MemberId = memberId,
+                    MeetingId = meetingOfGroupId
                 });
 
             return new MeetingGroupMemberData(
-                new MeetingGroupId(result.MeetingGroupId),
-                new MemberId(result.MemberId));
+                result.MeetingGroupId,
+                result.MemberId);
         }
 
         private class MeetingGroupMemberResponse

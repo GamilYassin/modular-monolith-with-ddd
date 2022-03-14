@@ -3,10 +3,10 @@ using System.Threading.Tasks;
 using CompanyName.MyMeetings.BuildingBlocks.Application;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.DisbaleMeetingCommentingConfiguration;
 using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.EnableMeetingCommentingConfiguration;
-using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.GetMeetingCommentingConfiguration;
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.SeedWork;
 using NUnit.Framework;
+using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfigurations.GetMeetingCommentingConfiguration;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.IntegrationTests.MeetingCommentingConfigurations
 {

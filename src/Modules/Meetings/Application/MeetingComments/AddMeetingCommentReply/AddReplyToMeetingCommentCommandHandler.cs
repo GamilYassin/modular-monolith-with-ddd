@@ -4,6 +4,7 @@ using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingComments;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
+using CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfigurations.GetMeetingCommentingConfiguration;
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddCommentReply
 {
@@ -26,7 +27,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.Ad
 
         public async Task<Guid> Handle(AddReplyToMeetingCommentCommand command, CancellationToken cancellationToken)
         {
-            var meetingComment = await _meetingCommentRepository.GetByIdAsync(new MeetingCommentId(command.InReplyToCommentId));
+            var meetingComment = await _meetingCommentRepository.GetByIdAsync( command.InReplyToCommentId);
             if (meetingComment == null)
             {
                 throw new InvalidCommandException(new List<string> { "To create reply the comment must exist." });
@@ -41,7 +42,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.Ad
             var replyToComment = meetingComment.Reply(_memberContext.MemberId, command.Reply, meetingGroup, meetingCommentingConfiguration);
             await _meetingCommentRepository.AddAsync(replyToComment);
 
-            return replyToComment.Id.Value;
+            return replyToComment.Id;
         }
     }
 }

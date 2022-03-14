@@ -1,12 +1,8 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Commands;
 using CompanyName.MyMeetings.Modules.Administration.Application.Contracts;
-using MediatR;
-using Serilog;
+
+using DomainPack.Contracts.MediatorContracts;
+
 using Serilog.Context;
 using Serilog.Core;
 using Serilog.Events;
@@ -44,19 +40,19 @@ namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configura
             {
                 try
                 {
-                    this._logger.Information(
+                    _logger.LogInfo(
                         "Executing command {Command}",
                         command.GetType().Name);
 
-                    var result = await _decorated.Handle(command, cancellationToken);
+                    Unit result = await _decorated.Handle(command, cancellationToken);
 
-                    this._logger.Information("Command {Command} processed successful", command.GetType().Name);
+                    _logger.Information("Command {Command} processed successful", command.GetType().Name);
 
                     return result;
                 }
                 catch (Exception exception)
                 {
-                    this._logger.Error(exception, "Command {Command} processing failed", command.GetType().Name);
+                    _logger.Error(exception, "Command {Command} processing failed", command.GetType().Name);
                     throw;
                 }
             }

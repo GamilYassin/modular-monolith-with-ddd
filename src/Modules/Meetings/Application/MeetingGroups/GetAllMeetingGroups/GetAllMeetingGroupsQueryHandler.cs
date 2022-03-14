@@ -15,16 +15,18 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.GetA
         {
             var connection = _sqlConnectionFactory.GetOpenConnection();
 
-            const string sql = "SELECT " +
-                               "[MeetingGroup].[Id], " +
-                               "[MeetingGroup].[Name], " +
-                               "[MeetingGroup].[Description], " +
-                               "[MeetingGroup].[LocationCountryCode], " +
-                               "[MeetingGroup].[LocationCity]" +
-                               "FROM [meetings].[v_MeetingGroups] AS [MeetingGroup]";
-            var meetingGroups = await connection.QueryAsync<MeetingGroupDto>(sql);
+            //const string sql = "SELECT " +
+            //                   "[MeetingGroup].[Id], " +
+            //                   "[MeetingGroup].[Name], " +
+            //                   "[MeetingGroup].[Description], " +
+            //                   "[MeetingGroup].[LocationCountryCode], " +
+            //                   "[MeetingGroup].[LocationCity]" +
+            //                   "FROM [meetings].[v_MeetingGroups] AS [MeetingGroup]";
+            //var meetingGroups = await connection.QueryAsync<MeetingGroupDto>(sql);
 
-            return meetingGroups.AsList();
+            //return meetingGroups.AsList();
+
+            throw new NotImplementedException();
         }
     }
 }

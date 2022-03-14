@@ -1,4 +1,6 @@
-﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.EditMeetingComment
+﻿using DomainPack.Validator;
+
+namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.EditMeetingComment
 {
     internal class EditMeetingCommentCommandValidator : AbstractValidator<EditMeetingCommentCommand>
     {

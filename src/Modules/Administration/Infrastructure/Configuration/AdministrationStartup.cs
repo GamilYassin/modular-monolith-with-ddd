@@ -1,7 +1,5 @@
-﻿using System;
-using Autofac;
-using CompanyName.MyMeetings.BuildingBlocks.Application;
-using CompanyName.MyMeetings.BuildingBlocks.Infrastructure;
+﻿using Autofac;
+
 using CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.AcceptMeetingGroupProposal;
 using CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.RequestMeetingGroupProposalVerification;
 using CompanyName.MyMeetings.Modules.Administration.Application.Members;
@@ -14,9 +12,9 @@ using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Processing.InternalCommands;
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Processing.Outbox;
 using CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration.Quartz;
-using Serilog;
-using Serilog.AspNetCore;
+
 using DomainPack.DomainEvents.EventBus;
+
 
 namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configuration
 {
@@ -30,7 +28,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configura
             ILogger logger,
             IEventsBus eventsBus)
         {
-            var moduleLogger = logger.ForContext("Module", "Administration");
+            //ILogger moduleLogger = logger.ForContext("Module", "Administration");
 
             ConfigureContainer(connectionString, executionContextAccessor, moduleLogger, eventsBus);
 
@@ -50,11 +48,11 @@ namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configura
             ILogger logger,
             IEventsBus eventsBus)
         {
-            var containerBuilder = new ContainerBuilder();
+            ContainerBuilder containerBuilder = new ContainerBuilder();
 
             containerBuilder.RegisterModule(new LoggingModule(logger));
 
-            var loggerFactory = new SerilogLoggerFactory(logger);
+            SerilogLoggerFactory loggerFactory = new SerilogLoggerFactory(logger);
             containerBuilder.RegisterModule(new DataAccessModule(connectionString, loggerFactory));
 
             containerBuilder.RegisterModule(new ProcessingModule());
@@ -62,7 +60,7 @@ namespace CompanyName.MyMeetings.Modules.Administration.Infrastructure.Configura
             containerBuilder.RegisterModule(new MediatorModule());
             containerBuilder.RegisterModule(new AuthenticationModule());
 
-            var domainNotificationsMap = new BiDictionary<string, Type>();
+            BiDictionary<string, Type> domainNotificationsMap = new BiDictionary<string, Type>();
             domainNotificationsMap.Add("MeetingGroupProposalAcceptedNotification", typeof(MeetingGroupProposalAcceptedNotification));
             containerBuilder.RegisterModule(new OutboxModule(domainNotificationsMap));
 

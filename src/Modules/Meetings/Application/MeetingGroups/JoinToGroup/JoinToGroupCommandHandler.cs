@@ -2,7 +2,7 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroups;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.JoinToGroup
 {
@@ -21,7 +21,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.Join
 
         public async Task<Unit> Handle(JoinToGroupCommand request, CancellationToken cancellationToken)
         {
-            var meetingGroup = await _meetingGroupRepository.GetByIdAsync(new MeetingGroupId(request.MeetingGroupId));
+            var meetingGroup = await _meetingGroupRepository.GetByIdAsync(request.MeetingGroupId);
 
             meetingGroup.JoinToGroupMember(_memberContext.MemberId);
 

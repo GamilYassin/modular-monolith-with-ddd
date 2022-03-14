@@ -2,7 +2,7 @@
 using CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes;
 using CompanyName.MyMeetings.Modules.Meetings.Domain.Members;
 
-using MediatR;
+
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.RemoveMeetingCommentLike
 {
@@ -19,7 +19,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.Re
 
         public async Task<Unit> Handle(RemoveMeetingCommentLikeCommand command, CancellationToken cancellationToken)
         {
-            var commentLike = await _meetingMemberCommentLikesRepository.GetAsync(_memberContext.MemberId, new MeetingCommentId(command.MeetingCommentId));
+            var commentLike = await _meetingMemberCommentLikesRepository.GetAsync(_memberContext.MemberId, command.MeetingCommentId);
             if (commentLike == null)
             {
                 throw new InvalidCommandException(new List<string> { "Meeting comment like for removing must exist." });

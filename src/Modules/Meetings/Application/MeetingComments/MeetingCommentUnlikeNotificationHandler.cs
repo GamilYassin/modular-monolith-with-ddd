@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿
 
 namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments
 {
@@ -24,7 +24,7 @@ namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments
                 sql,
                 new
                 {
-                    MeetingCommentId = notification.DomainEvent.MeetingCommentId.Value
+                    MeetingCommentId = notification.DomainEvent.MeetingCommentId
                 });
         }
     }
